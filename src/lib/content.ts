@@ -2,7 +2,7 @@
  * All website copy lives here so it can be edited in one place.
  *
  * Anything in [square brackets] is a placeholder for SWS Global's own facts
- * (figures, awards, client testimonials). Replace it before going live, or
+ * (figures and client testimonials). Replace it before going live, or
  * remove the section if it does not apply yet.
  *
  * Photos are free-to-use images from Unsplash (see README for credits).
@@ -11,7 +11,6 @@
 export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Awards", href: "#awards" },
   { label: "Why Us", href: "#why-us" },
   { label: "Testimonials", href: "#testimonials" },
 ] as const;
@@ -129,23 +128,6 @@ export const services = [
     image: "/images/services/admin-support.jpg",
     alt: "Hands typing on a laptop",
   },
-] as const;
-
-/** TODO: replace with SWS Global's real awards, or remove the Awards section from src/app/page.tsx. */
-export const awardsIntro = {
-  eyebrow: "Recognition",
-  title: "Awards & Recognition",
-  description: "[One or two lines introducing SWS Global's awards and industry recognition.]",
-  image: {
-    src: "/images/awards/recognition.jpg",
-    alt: "Gold and silver trophies on a wooden surface",
-  },
-};
-
-export const awards = [
-  { title: "[Award name]", description: "[What the award recognises, who presented it and the year.]" },
-  { title: "[Award name]", description: "[What the award recognises, who presented it and the year.]" },
-  { title: "[Certification or recognition]", description: "[A short description of this recognition.]" },
 ] as const;
 
 /** TODO: replace with real quotes from SWS Global clients (with their permission). */
