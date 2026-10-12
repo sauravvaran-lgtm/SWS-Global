@@ -100,7 +100,7 @@ All photos are from [Unsplash](https://unsplash.com) and free to use under the
 
 | Image | Photographer |
 | --- | --- |
-| `hero/team-collaboration.jpg` | Jud Mackrill |
+| `hero/hand-network.jpg` (people icons drawn in code) | Ratapan Anantawat |
 | `about/recruitment-conversation.jpg` | Christina @ wocintechchat.com |
 | `services/database-management.jpg` | Luke Chesser |
 | `services/market-mapping.jpg` | ThisisEngineering |

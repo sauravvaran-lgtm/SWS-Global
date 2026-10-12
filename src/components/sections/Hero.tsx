@@ -7,6 +7,7 @@ import { useRef, type CSSProperties } from "react";
 import { hero, services } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 import { ButtonLink } from "@/components/ui/ButtonLink";
+import { TalentNetwork } from "@/components/ui/TalentNetwork";
 import { useMediaQuery } from "@/lib/hooks";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -106,7 +107,7 @@ export function Hero() {
             </div>
           </motion.div>
 
-          {/* Photo card with rotating tagline badge */}
+          {/* Photo card (hand + glowing talent network) with rotating tagline badge */}
           <motion.div
             style={parallax ? { y: mediaY, opacity: fade } : undefined}
             className="relative mx-auto hidden w-full max-w-[30rem] md:block lg:mx-0 lg:ml-auto"
@@ -125,9 +126,12 @@ export function Hero() {
                   fill
                   preload
                   sizes="(min-width: 1024px) 480px, 70vw"
-                  className="object-cover object-[60%_center] transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+                  className="object-cover object-[40%_center] transition-transform duration-[1200ms] ease-out group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-aqua-950/60 via-transparent to-aqua-950/10" />
+                {/* Shift the photo's blue towards the brand teal */}
+                <div className="absolute inset-0 bg-aqua-500/45 mix-blend-color" />
+                <div className="absolute inset-0 bg-gradient-to-t from-aqua-950/50 via-transparent to-aqua-950/30" />
+                <TalentNetwork className="absolute inset-0 size-full transition-transform duration-[1200ms] ease-out group-hover:scale-105" />
               </div>
             </motion.div>
 

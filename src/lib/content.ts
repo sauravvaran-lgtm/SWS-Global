@@ -25,8 +25,8 @@ export const hero = {
   primaryCta: { label: "Our Services", href: "#services" },
   secondaryCta: { label: "Contact us", href: "#contact" },
   image: {
-    src: "/images/hero/team-collaboration.jpg",
-    alt: "Recruitment team collaborating around a laptop",
+    src: "/images/hero/hand-network.jpg",
+    alt: "Open hand holding a glowing network of people, with one candidate selected",
   },
   chip: { label: "How we work", value: "Dedicated offshore recruiters" },
   ring: "Hire smarter • Scale faster • ",
