@@ -30,12 +30,12 @@ export function SectionHeading({
         <Reveal distance={16}>
           <p
             className={`mb-4 inline-flex items-center gap-2.5 text-xs font-bold uppercase tracking-[0.22em] ${
-              dark ? "text-aqua-400" : "text-aqua-600"
+              dark ? "text-accent-500" : "text-brand-600"
             }`}
           >
             <span className="relative flex size-2">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-signal opacity-60" />
-              <span className="relative inline-flex size-2 rounded-full bg-signal" />
+              <span className="absolute inline-flex size-full animate-ping rounded-full bg-accent-500 opacity-60" />
+              <span className="relative inline-flex size-2 rounded-full bg-accent-500" />
             </span>
             {eyebrow}
           </p>

@@ -47,7 +47,7 @@ function QuoteCarousel() {
       <Quote aria-hidden className="absolute -right-6 -top-6 size-40 text-white/[0.04] sm:size-52" />
 
       <div className="relative flex items-center justify-between gap-4">
-        <span className="grid size-14 place-items-center rounded-2xl bg-aqua-400 text-ink shadow-[0_18px_40px_-14px_rgb(61_217_217/0.7)]">
+        <span className="grid size-14 place-items-center rounded-2xl bg-accent-500 text-ink shadow-[0_18px_40px_-14px_rgb(255_122_26/0.7)]">
           <Quote aria-hidden className="size-6 fill-current" />
         </span>
         <p className="font-display text-sm font-semibold tabular-nums text-white/50" aria-hidden>
@@ -81,12 +81,12 @@ function QuoteCarousel() {
               “{current.quote}”
             </blockquote>
             <figcaption className="mt-7 flex items-center gap-4">
-              <span className="grid size-12 shrink-0 place-items-center rounded-full bg-gradient-to-br from-aqua-400 to-aqua-600 text-ink">
+              <span className="grid size-12 shrink-0 place-items-center rounded-full bg-gradient-to-br from-accent-400 to-accent-600 text-ink">
                 <Quote aria-hidden className="size-4 fill-current" />
               </span>
               <span>
                 <span className="block font-semibold text-white">{current.name}</span>
-                {current.role && <span className="block text-sm text-aqua-200/80">{current.role}</span>}
+                {current.role && <span className="block text-sm text-brand-200/80">{current.role}</span>}
               </span>
             </figcaption>
           </motion.figure>
@@ -109,7 +109,7 @@ function QuoteCarousel() {
               {i === index && (
                 <motion.span
                   key={`${index}-${paused}`}
-                  className="absolute inset-y-0 left-0 rounded-full bg-aqua-400"
+                  className="absolute inset-y-0 left-0 rounded-full bg-accent-500"
                   initial={{ width: paused ? "100%" : "0%" }}
                   animate={{ width: "100%" }}
                   transition={{ duration: paused ? 0 : AUTOPLAY_MS / 1000, ease: "linear" }}
@@ -124,7 +124,7 @@ function QuoteCarousel() {
             type="button"
             onClick={() => setPaused((p) => !p)}
             aria-label={paused ? "Resume autoplay" : "Pause autoplay"}
-            className="grid size-11 place-items-center rounded-full border border-white/15 text-white/80 transition hover:border-aqua-400 hover:text-aqua-400"
+            className="grid size-11 place-items-center rounded-full border border-white/15 text-white/80 transition hover:border-accent-500 hover:text-accent-500"
           >
             {paused ? <Play aria-hidden className="size-4" /> : <Pause aria-hidden className="size-4" />}
           </button>
@@ -132,7 +132,7 @@ function QuoteCarousel() {
             type="button"
             onClick={() => paginate(-1)}
             aria-label="Previous testimonial"
-            className="grid size-12 place-items-center rounded-full border border-white/15 text-white transition hover:-translate-x-0.5 hover:border-aqua-400 hover:bg-aqua-400 hover:text-ink"
+            className="grid size-12 place-items-center rounded-full border border-white/15 text-white transition hover:-translate-x-0.5 hover:border-accent-500 hover:bg-accent-500 hover:text-ink"
           >
             <ChevronLeft aria-hidden className="size-5" />
           </button>
@@ -140,7 +140,7 @@ function QuoteCarousel() {
             type="button"
             onClick={() => paginate(1)}
             aria-label="Next testimonial"
-            className="grid size-12 place-items-center rounded-full bg-aqua-400 text-ink transition hover:translate-x-0.5 hover:bg-aqua-300"
+            className="grid size-12 place-items-center rounded-full bg-accent-500 text-ink transition hover:translate-x-0.5 hover:bg-accent-400"
           >
             <ChevronRight aria-hidden className="size-5" />
           </button>
@@ -165,11 +165,11 @@ export function Testimonials() {
     <section
       id="testimonials"
       aria-labelledby="testimonials-title"
-      className="section-y noise relative overflow-hidden bg-aqua-950 text-white"
+      className="section-y noise relative overflow-hidden bg-brand-950 text-white"
     >
       <div className="bg-grid absolute inset-0 opacity-50 [mask-image:linear-gradient(to_bottom,#000,transparent_70%)]" />
-      <div className="absolute -right-40 top-10 size-[34rem] animate-drift rounded-full bg-aqua-500/20 blur-[130px]" />
-      <div className="absolute -left-40 bottom-0 size-[28rem] animate-drift rounded-full bg-aqua-400/10 blur-[120px] [animation-delay:-9s]" />
+      <div className="absolute -right-40 top-10 size-[34rem] animate-drift rounded-full bg-brand-500/20 blur-[130px]" />
+      <div className="absolute -left-40 bottom-0 size-[28rem] animate-drift rounded-full bg-accent-500/10 blur-[120px] [animation-delay:-9s]" />
 
       <div className="container-x relative grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <Reveal direction="right" distance={48} className="relative order-2 lg:order-1">
@@ -181,9 +181,9 @@ export function Testimonials() {
               sizes="(min-width: 1240px) 500px, (min-width: 1024px) 40vw, 92vw"
               className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-aqua-950/80 via-aqua-950/10 to-transparent" />
-            <div className="absolute inset-x-5 bottom-5 flex items-center gap-3 rounded-2xl border border-white/15 bg-aqua-950/70 p-4 backdrop-blur-md sm:inset-x-6 sm:bottom-6">
-              <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-aqua-400 text-ink">
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-brand-950/10 to-transparent" />
+            <div className="absolute inset-x-5 bottom-5 flex items-center gap-3 rounded-2xl border border-white/15 bg-brand-950/70 p-4 backdrop-blur-md sm:inset-x-6 sm:bottom-6">
+              <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-accent-500 text-ink">
                 <Quote aria-hidden className="size-5 fill-current" />
               </span>
               <p className="font-display text-sm font-semibold leading-snug text-white sm:text-base">

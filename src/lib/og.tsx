@@ -6,10 +6,10 @@ import { hero, services } from "./content";
 export const ogSize = { width: 1200, height: 630 };
 export const ogAlt = `SWS Global — ${hero.titleLead} ${hero.titleAccent}`;
 
-const markSrc = `data:image/svg+xml;base64,${await readFile(
-  join(process.cwd(), "public/images/logo/swsglobal-mark.svg"),
-  "base64",
-)}`;
+const asset = async (file: string) =>
+  `data:image/png;base64,${await readFile(join(process.cwd(), "public/images/logo", file), "base64")}`;
+const markSrc = await asset("logo-mark.png");
+const wordmarkSrc = await asset("wordmark-light.png");
 
 /** Social share card (Open Graph / Twitter) rendered at build time. */
 export function renderOgImage() {
@@ -24,7 +24,7 @@ export function renderOgImage() {
           justifyContent: "space-between",
           padding: "64px 72px",
           color: "#ffffff",
-          background: "linear-gradient(135deg, #042323 0%, #083636 55%, #104f4f 100%)",
+          background: "linear-gradient(135deg, #061a3a 0%, #0a2c5c 55%, #0b3b78 100%)",
           position: "relative",
         }}
       >
@@ -36,17 +36,15 @@ export function renderOgImage() {
             width: 560,
             height: 560,
             borderRadius: 9999,
-            background: "radial-gradient(circle, rgba(61,217,217,0.45) 0%, rgba(61,217,217,0) 70%)",
+            background: "radial-gradient(circle, rgba(255,122,26,0.45) 0%, rgba(255,122,26,0) 70%)",
           }}
         />
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={markSrc} width={76} height={76} alt="" />
-            <div style={{ display: "flex", fontSize: 46, fontWeight: 700, letterSpacing: 0.5 }}>
-              <span style={{ color: "#30dbdb" }}>SWS</span>
-              <span>GLOBAL</span>
-            </div>
+            <img src={markSrc} width={92} height={92} alt="" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={wordmarkSrc} width={300} height={32} alt="" />
           </div>
           <div
             style={{
@@ -57,15 +55,15 @@ export function renderOgImage() {
               fontSize: 22,
               letterSpacing: 3,
               textTransform: "uppercase",
-              color: "#a9eeee",
+              color: "#b6d4fc",
             }}
           >
             {hero.eyebrow}
           </div>
         </div>
 
-        <div style={{ display: "flex", flexWrap: "wrap", fontSize: 64, fontWeight: 700, lineHeight: 1.12, maxWidth: 1000 }}>
-          {hero.titleLead}&nbsp;<span style={{ color: "#3dd9d9" }}>{hero.titleAccent}</span>
+        <div style={{ display: "flex", flexWrap: "wrap", fontSize: 56, fontWeight: 700, lineHeight: 1.15, maxWidth: 1060 }}>
+          {hero.titleLead}&nbsp;<span style={{ color: "#ff7a1a" }}>{hero.titleAccent}</span>
         </div>
 
         <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>

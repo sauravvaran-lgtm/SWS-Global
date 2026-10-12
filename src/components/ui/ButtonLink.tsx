@@ -5,13 +5,13 @@ type Variant = "primary" | "dark" | "outline-light" | "outline-dark" | "white";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-aqua-400 text-ink shadow-[0_10px_30px_-10px_rgb(61_217_217/0.7)] hover:bg-aqua-300 hover:shadow-[0_16px_40px_-12px_rgb(61_217_217/0.85)]",
-  dark: "bg-ink text-white shadow-[0_10px_30px_-12px_rgb(22_22_22/0.6)] hover:bg-aqua-800",
-  white: "bg-white text-ink shadow-[0_10px_30px_-12px_rgb(0_0_0/0.35)] hover:bg-aqua-50",
+    "bg-accent-500 text-ink shadow-[0_10px_30px_-10px_rgb(255_122_26/0.7)] hover:bg-accent-400 hover:shadow-[0_16px_40px_-12px_rgb(255_122_26/0.85)]",
+  dark: "bg-ink text-white shadow-[0_10px_30px_-12px_rgb(22_22_22/0.6)] hover:bg-brand-800",
+  white: "bg-white text-ink shadow-[0_10px_30px_-12px_rgb(0_0_0/0.35)] hover:bg-brand-50",
   "outline-light":
-    "border border-white/30 text-white backdrop-blur-sm hover:border-aqua-400 hover:bg-white/10",
+    "border border-white/30 text-white backdrop-blur-sm hover:border-accent-500 hover:bg-white/10",
   "outline-dark":
-    "border border-ink/15 text-ink hover:border-aqua-600 hover:bg-aqua-50 hover:text-aqua-800",
+    "border border-ink/15 text-ink hover:border-brand-600 hover:bg-brand-50 hover:text-brand-800",
 };
 
 type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {

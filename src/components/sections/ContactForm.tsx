@@ -148,9 +148,9 @@ export function ContactForm() {
     <div
       ref={cardRef}
       style={{ minHeight: lockedHeight }}
-      className="relative flex h-full flex-col overflow-hidden rounded-[2rem] bg-white p-6 shadow-[0_30px_80px_-40px_rgb(8_54_54/0.45)] ring-1 ring-ink/5 sm:p-10"
+      className="relative flex h-full flex-col overflow-hidden rounded-[2rem] bg-white p-6 shadow-[0_30px_80px_-40px_rgb(10_44_92/0.45)] ring-1 ring-ink/5 sm:p-10"
     >
-      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-aqua-400 via-aqua-500 to-signal-soft" />
+      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand-600 via-brand-400 to-accent-500" />
 
       <AnimatePresence mode="wait" initial={false}>
         {status === "success" ? (
@@ -163,9 +163,9 @@ export function ContactForm() {
             className="flex min-h-[28rem] flex-1 flex-col items-center justify-center text-center"
             role="status"
           >
-            <span className="relative grid size-24 place-items-center rounded-full bg-aqua-50">
-              <span className="absolute inset-0 animate-pulse-ring rounded-full bg-aqua-200" />
-              <svg viewBox="0 0 52 52" className="relative size-14 text-aqua-600" aria-hidden>
+            <span className="relative grid size-24 place-items-center rounded-full bg-brand-50">
+              <span className="absolute inset-0 animate-pulse-ring rounded-full bg-brand-200" />
+              <svg viewBox="0 0 52 52" className="relative size-14 text-brand-600" aria-hidden>
                 <motion.circle
                   cx="26"
                   cy="26"
@@ -199,7 +199,7 @@ export function ContactForm() {
             <button
               type="button"
               onClick={reset}
-              className="mt-8 inline-flex items-center gap-2 rounded-full border border-ink/15 px-5 py-2.5 text-sm font-semibold text-ink transition hover:border-aqua-500 hover:bg-aqua-50"
+              className="mt-8 inline-flex items-center gap-2 rounded-full border border-ink/15 px-5 py-2.5 text-sm font-semibold text-ink transition hover:border-brand-500 hover:bg-brand-50"
             >
               <RotateCcw aria-hidden className="size-4" /> Send another inquiry
             </button>
@@ -324,7 +324,7 @@ export function ContactForm() {
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="shine group inline-flex shrink-0 items-center justify-center gap-3 rounded-full bg-ink px-8 py-4 text-[0.95rem] font-semibold text-white shadow-[0_14px_34px_-14px_rgb(22_22_22/0.7)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-aqua-800 disabled:cursor-wait disabled:opacity-80 disabled:hover:translate-y-0"
+                className="shine group inline-flex shrink-0 items-center justify-center gap-3 rounded-full bg-ink px-8 py-4 text-[0.95rem] font-semibold text-white shadow-[0_14px_34px_-14px_rgb(22_22_22/0.7)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-800 disabled:cursor-wait disabled:opacity-80 disabled:hover:translate-y-0"
               >
                 <span className="relative z-[2]">{status === "submitting" ? "Sending…" : "Submit inquiry"}</span>
                 {status === "submitting" ? (

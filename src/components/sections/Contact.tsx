@@ -28,12 +28,12 @@ export function Contact() {
 
         <div className="mt-14 grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:gap-8">
           <Reveal direction="right" distance={40} className="h-full">
-            <aside className="noise relative flex h-full flex-col overflow-hidden rounded-[2rem] bg-aqua-900 p-7 text-white sm:p-10">
-              <div className="absolute -right-24 -top-24 size-72 animate-drift rounded-full bg-aqua-400/25 blur-3xl" />
+            <aside className="noise relative flex h-full flex-col overflow-hidden rounded-[2rem] bg-brand-900 p-7 text-white sm:p-10">
+              <div className="absolute -right-24 -top-24 size-72 animate-drift rounded-full bg-brand-400/30 blur-3xl" />
               <div className="bg-grid absolute inset-0 opacity-50 [mask-image:linear-gradient(to_top,#000,transparent)]" />
 
               <div className="relative">
-                <h3 className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-aqua-400">
+                <h3 className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-accent-500">
                   <MapPin aria-hidden className="size-4" /> Office
                 </h3>
                 <address className="mt-4 not-italic leading-relaxed text-white/85">
@@ -50,7 +50,7 @@ export function Contact() {
               </div>
 
               <div className="relative mt-9">
-                <h3 className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-aqua-400">
+                <h3 className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-accent-500">
                   <Phone aria-hidden className="size-4" /> Phone
                 </h3>
                 {phones.length > 0 ? (
@@ -59,9 +59,9 @@ export function Contact() {
                       <li key={phone.href}>
                         <a
                           href={phone.href}
-                          className="group flex items-center justify-between gap-4 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 transition-all duration-300 hover:border-aqua-400/60 hover:bg-white/[0.07]"
+                          className="group flex items-center justify-between gap-4 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 transition-all duration-300 hover:border-accent-500/60 hover:bg-white/[0.07]"
                         >
-                          <span className="text-xs font-bold uppercase tracking-[0.16em] text-white/50 group-hover:text-aqua-300">
+                          <span className="text-xs font-bold uppercase tracking-[0.16em] text-white/50 group-hover:text-accent-400">
                             {phone.label}
                           </span>
                           <span className="font-semibold tabular-nums text-white">{phone.display}</span>
@@ -77,7 +77,7 @@ export function Contact() {
               </div>
 
               <div className="relative mt-9">
-                <h3 className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-aqua-400">
+                <h3 className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-accent-500">
                   <Mail aria-hidden className="size-4" /> Email
                 </h3>
                 {email ? (
@@ -95,7 +95,7 @@ export function Contact() {
               </div>
 
               <div className="relative mt-auto pt-10">
-                <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-aqua-400">
+                <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-accent-500">
                   <Sparkles aria-hidden className="size-4" /> How we can help
                 </p>
                 <ul className="mt-4 flex flex-wrap gap-2">

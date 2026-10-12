@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
       images: [
         absoluteUrl("/opengraph-image"),
-        absoluteUrl("/images/logo/swsglobal-logo-dark.png"),
+        absoluteUrl("/images/logo/logo-full.png"),
         absoluteUrl("/images/hero/hand-network.jpg"),
         absoluteUrl("/images/about/recruitment-conversation.jpg"),
         absoluteUrl("/images/why-us/team-at-work.jpg"),

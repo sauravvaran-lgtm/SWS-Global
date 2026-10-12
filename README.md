@@ -3,8 +3,8 @@
 A single-page marketing site for **SWS Global** (offshore recruitment services), built with
 Next.js 16 (App Router), React 19, Tailwind CSS 4 and Motion for animations.
 
-Colour palette: aqua `#3DD9D9`, teals `#2EA3A3` / `#248282` / `#104F4F` / `#083636`,
-charcoal `#333333` / `#161616` and a red accent `#E01616`.
+Colour palette (from the logo): brand blue/navy `#1A6FD6` → `#061A3A` and the "SWS" orange
+`#FF7A1A` (see the `--color-brand-*` and `--color-accent-*` tokens in `src/app/globals.css`).
 
 ## Getting started
 
@@ -59,16 +59,19 @@ src/
     contact.ts            Contact form validation + submit function (see below)
     countries.ts          Country list for the form
 public/
-  images/logo/            SWS Global logo (PNG, dark + light) and symbol (SVG)
+  images/logo/            SWS Global logo master file + generated variants
   images/…                Section photos
 ```
 
 ## Logo
 
-- `public/images/logo/swsglobal-mark.svg` — the globe symbol
-- `public/images/logo/swsglobal-logo-dark.png` — full logo for light backgrounds
-- `public/images/logo/swsglobal-logo-light.png` — full logo for dark backgrounds
-- On the website the logo is drawn in code: `src/components/ui/Logo.tsx`
+All variants are generated from the master file `public/images/logo/swsglobal-logo-dark-2.png`:
+
+- `logo-full.png` / `logo-full-light.png` — full stacked logo with tagline (light = white lettering for dark backgrounds)
+- `logo-mark.png` — the globe symbol on its own
+- `wordmark.png` / `wordmark-light.png` — the "SWS GLOBAL" lettering, used with the globe in the header
+- Favicons: `src/app/icon.png`, `src/app/apple-icon.png`, `public/images/icon-192.png`, `public/images/icon-512.png`
+- Components: `Logo` (header, horizontal) and `LogoFull` (footer) in `src/components/ui/Logo.tsx`
 
 ## Connecting the contact form
 

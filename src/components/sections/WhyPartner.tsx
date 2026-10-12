@@ -19,7 +19,7 @@ const icons = [GraduationCap, UserRoundCog, UserCheck, Clock4, ShieldCheck, Slid
 export function WhyPartner() {
   return (
     <section id="why-us" aria-labelledby="why-title" className="section-y relative overflow-hidden bg-white">
-      <div className="absolute -left-48 top-1/3 size-[30rem] rounded-full bg-aqua-200/50 blur-[120px]" />
+      <div className="absolute -left-48 top-1/3 size-[30rem] rounded-full bg-brand-200/50 blur-[120px]" />
 
       <div className="container-x relative grid items-center gap-14 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
         <div>
@@ -30,9 +30,9 @@ export function WhyPartner() {
               const Icon = icons[i];
               return (
                 <StaggerItem as="li" key={point} distance={20}>
-                  <div className="group relative flex h-full items-center gap-4 overflow-hidden rounded-2xl bg-mist p-4 ring-1 ring-ink/5 transition-all duration-400 hover:-translate-y-1 hover:bg-white hover:shadow-[0_18px_40px_-22px_rgb(8_54_54/0.5)] hover:ring-aqua-300">
-                    <span className="absolute inset-y-0 left-0 w-1 origin-bottom scale-y-0 bg-aqua-400 transition-transform duration-400 group-hover:scale-y-100" />
-                    <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-aqua-900 text-aqua-400 transition-all duration-400 group-hover:scale-105 group-hover:bg-aqua-400 group-hover:text-ink">
+                  <div className="group relative flex h-full items-center gap-4 overflow-hidden rounded-2xl bg-mist p-4 ring-1 ring-ink/5 transition-all duration-400 hover:-translate-y-1 hover:bg-white hover:shadow-[0_18px_40px_-22px_rgb(10_44_92/0.5)] hover:ring-accent-400">
+                    <span className="absolute inset-y-0 left-0 w-1 origin-bottom scale-y-0 bg-accent-500 transition-transform duration-400 group-hover:scale-y-100" />
+                    <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-brand-900 text-accent-500 transition-all duration-400 group-hover:scale-105 group-hover:bg-accent-500 group-hover:text-ink">
                       <Icon aria-hidden className="size-5" />
                     </span>
                     <span className="font-semibold leading-snug text-charcoal">{point}</span>
@@ -51,7 +51,7 @@ export function WhyPartner() {
 
         <Reveal direction="left" distance={48}>
           <div className="group/frame relative">
-            <div className="absolute -inset-3 rotate-2 rounded-[2rem] bg-gradient-to-br from-aqua-400 via-aqua-500 to-aqua-700 opacity-90 transition-transform duration-700 group-hover/frame:rotate-0 sm:-inset-4" />
+            <div className="absolute -inset-3 rotate-2 rounded-[2rem] bg-gradient-to-br from-brand-400 via-brand-500 to-brand-800 opacity-90 transition-transform duration-700 group-hover/frame:rotate-0 sm:-inset-4" />
             <div className="relative overflow-hidden rounded-[1.75rem] bg-ink p-2.5 shadow-2xl">
               <div className="relative aspect-[4/3] overflow-hidden rounded-[1.4rem]">
                 <Image
@@ -63,8 +63,8 @@ export function WhyPartner() {
                 />
               </div>
             </div>
-            <div className="absolute -bottom-6 left-6 z-10 animate-float rounded-2xl bg-white p-4 shadow-[0_24px_60px_-20px_rgb(4_35_35/0.45)] sm:left-10">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-aqua-600">{whyPartner.imageCard.label}</p>
+            <div className="absolute -bottom-6 left-6 z-10 animate-float rounded-2xl bg-white p-4 shadow-[0_24px_60px_-20px_rgb(6_26_58/0.45)] sm:left-10">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-600">{whyPartner.imageCard.label}</p>
               <p className="mt-0.5 font-display text-base font-bold text-ink">{whyPartner.imageCard.value}</p>
             </div>
           </div>

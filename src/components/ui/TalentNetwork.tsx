@@ -47,12 +47,12 @@ export function TalentNetwork({ className = "" }: { className?: string }) {
         </filter>
         <radialGradient id="tn-palm" cx="50%" cy="50%" r="50%">
           <stop offset="0%" stopColor="#ffffff" stopOpacity="0.95" />
-          <stop offset="35%" stopColor="#72e4e4" stopOpacity="0.55" />
-          <stop offset="100%" stopColor="#3dd9d9" stopOpacity="0" />
+          <stop offset="35%" stopColor="#7fb3f5" stopOpacity="0.55" />
+          <stop offset="100%" stopColor="#ff7a1a" stopOpacity="0" />
         </radialGradient>
         <linearGradient id="tn-beam" x1="0" y1="1" x2="0" y2="0">
-          <stop offset="0%" stopColor="#72e4e4" stopOpacity="0.45" />
-          <stop offset="100%" stopColor="#72e4e4" stopOpacity="0" />
+          <stop offset="0%" stopColor="#7fb3f5" stopOpacity="0.45" />
+          <stop offset="100%" stopColor="#7fb3f5" stopOpacity="0" />
         </linearGradient>
       </defs>
 
@@ -62,7 +62,7 @@ export function TalentNetwork({ className = "" }: { className?: string }) {
 
       <g className="animate-float">
         {/* Connections */}
-        <g stroke="#72e4e4" strokeOpacity="0.45" strokeWidth="1.4" strokeDasharray="3 5" fill="none">
+        <g stroke="#7fb3f5" strokeOpacity="0.45" strokeWidth="1.4" strokeDasharray="3 5" fill="none">
           <path d="M200 236 L132 262" />
           <path d="M200 236 L268 262" />
           <path d="M132 262 L86 214" />
@@ -78,7 +78,7 @@ export function TalentNetwork({ className = "" }: { className?: string }) {
             <Person x={132} y={246} r={14} />
             <Person x={268} y={246} r={14} />
           </g>
-          <g opacity="0.75" stroke="#b9f3f3">
+          <g opacity="0.75" stroke="#cfe3ff">
             <Person x={86} y={202} r={9.5} width={2.2} />
             <Person x={314} y={202} r={9.5} width={2.2} />
             <Person x={156} y={152} r={8} width={2} />
@@ -88,11 +88,11 @@ export function TalentNetwork({ className = "" }: { className?: string }) {
 
         {/* "Selected" checkmark */}
         <g className="hero-fade" style={delay(1.4)} filter="url(#tn-glow)">
-          <rect x="173" y="110" width="54" height="54" rx="13" fill="#042323" fillOpacity="0.55" stroke="#ffffff" strokeWidth="2.6" />
+          <rect x="173" y="110" width="54" height="54" rx="13" fill="#061a3a" fillOpacity="0.55" stroke="#ffffff" strokeWidth="2.6" />
           <path
             d="M186 138 L197 149 L215 126"
             fill="none"
-            stroke="#3dd9d9"
+            stroke="#ff7a1a"
             strokeWidth="5"
             strokeLinecap="round"
             strokeLinejoin="round"

@@ -11,7 +11,7 @@ export function Services() {
       aria-labelledby="services-title"
       className="section-y relative overflow-hidden bg-mist"
     >
-      <div className="absolute -right-40 top-20 size-[30rem] rounded-full bg-aqua-200/40 blur-[120px]" />
+      <div className="absolute -right-40 top-20 size-[30rem] rounded-full bg-brand-200/40 blur-[120px]" />
 
       <div className="container-x relative">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
@@ -38,7 +38,7 @@ export function Services() {
             <StaggerItem as="li" key={service.id} className="h-full">
               <article
                 id={service.id}
-                className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-[0_2px_20px_-12px_rgb(4_35_35/0.25)] ring-1 ring-ink/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-25px_rgb(8_54_54/0.45)] hover:ring-aqua-300"
+                className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-[0_2px_20px_-12px_rgb(6_26_58/0.25)] ring-1 ring-ink/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-25px_rgb(10_44_92/0.45)] hover:ring-accent-400"
               >
                 <div className="relative aspect-[10/8] overflow-hidden">
                   <Image
@@ -48,16 +48,16 @@ export function Services() {
                     sizes="(min-width: 1240px) 290px, (min-width: 1024px) 23vw, (min-width: 640px) 48vw, 100vw"
                     className="object-cover grayscale transition-[transform,filter] duration-[900ms] ease-out group-hover:scale-110 group-hover:grayscale-0"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-aqua-950/80 via-aqua-900/10 to-transparent mix-blend-multiply transition-opacity duration-500 group-hover:opacity-70" />
-                  <div className="absolute inset-0 bg-aqua-500/0 mix-blend-color transition-colors duration-500 group-hover:bg-aqua-500/35" />
-                  <span className="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-1 font-display text-xs font-bold tracking-wider text-aqua-800 backdrop-blur">
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-brand-900/10 to-transparent mix-blend-multiply transition-opacity duration-500 group-hover:opacity-70" />
+                  <div className="absolute inset-0 bg-brand-500/0 mix-blend-color transition-colors duration-500 group-hover:bg-brand-500/35" />
+                  <span className="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-1 font-display text-xs font-bold tracking-wider text-brand-800 backdrop-blur">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
 
                 <div className="relative flex flex-1 flex-col p-6">
-                  <span className="absolute inset-x-6 top-0 h-0.5 origin-left scale-x-0 bg-gradient-to-r from-aqua-400 to-signal-soft transition-transform duration-500 group-hover:scale-x-100" />
-                  <h3 className="font-display text-lg font-bold leading-snug text-ink transition-colors duration-300 group-hover:text-aqua-700">
+                  <span className="absolute inset-x-6 top-0 h-0.5 origin-left scale-x-0 bg-gradient-to-r from-brand-500 to-accent-500 transition-transform duration-500 group-hover:scale-x-100" />
+                  <h3 className="font-display text-lg font-bold leading-snug text-ink transition-colors duration-300 group-hover:text-brand-700">
                     {service.title}
                   </h3>
                   <p className="mt-3 text-[0.94rem] leading-relaxed text-muted">{service.description}</p>

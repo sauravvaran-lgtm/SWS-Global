@@ -29,22 +29,22 @@ export function Hero() {
       ref={ref}
       id="home"
       aria-labelledby="hero-title"
-      className="noise relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-aqua-950 text-white"
+      className="noise relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-brand-950 text-white"
     >
       {/* Background layers */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,var(--color-aqua-800)_0%,transparent_55%)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,var(--color-brand-800)_0%,transparent_55%)]" />
       <div className="bg-grid absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_40%_40%,#000_15%,transparent_75%)]" />
-      <div className="absolute -left-40 top-1/4 -z-10 size-[34rem] animate-drift rounded-full bg-aqua-500/25 blur-[120px]" />
-      <div className="absolute -right-32 bottom-0 -z-10 size-[30rem] animate-drift rounded-full bg-aqua-400/20 blur-[120px] [animation-delay:-6s]" />
+      <div className="absolute -left-40 top-1/4 -z-10 size-[34rem] animate-drift rounded-full bg-brand-500/25 blur-[120px]" />
+      <div className="absolute -right-32 bottom-0 -z-10 size-[30rem] animate-drift rounded-full bg-accent-500/20 blur-[120px] [animation-delay:-6s]" />
 
       <div className="container-x relative flex flex-1 items-center pb-32 pt-[calc(var(--header-height)+2.5rem)] sm:pb-36 lg:pb-40">
         <div className="grid w-full items-center gap-14 lg:grid-cols-[1.4fr_1fr] lg:gap-12 xl:gap-16">
           <motion.div style={parallax ? { y: contentY, opacity: fade } : undefined}>
             <p
               style={delay(0.1)}
-              className="hero-fade mb-7 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 py-1.5 pl-1.5 pr-4 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-aqua-200 backdrop-blur-md sm:text-xs"
+              className="hero-fade mb-7 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 py-1.5 pl-1.5 pr-4 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-brand-200 backdrop-blur-md sm:text-xs"
             >
-              <span className="whitespace-nowrap rounded-full bg-aqua-400 px-2.5 py-1 text-[0.65rem] font-bold tracking-[0.12em] text-ink">
+              <span className="whitespace-nowrap rounded-full bg-accent-500 px-2.5 py-1 text-[0.65rem] font-bold tracking-[0.12em] text-ink">
                 {hero.badge}
               </span>
               {hero.eyebrow}
@@ -70,7 +70,7 @@ export function Hero() {
                     aria-hidden
                     viewBox="0 0 300 20"
                     preserveAspectRatio="none"
-                    className="absolute -bottom-1 left-0 h-3 w-full text-signal-soft"
+                    className="absolute -bottom-1 left-0 h-3 w-full text-brand-300"
                   >
                     <path
                       d="M3 14 C 70 4, 150 4, 297 12"
@@ -118,8 +118,8 @@ export function Hero() {
               transition={{ duration: 1.1, delay: 0.5, ease: EASE }}
               className="group relative"
             >
-              <div className="absolute -inset-px rounded-[2.1rem] bg-gradient-to-br from-aqua-300/70 via-aqua-500/20 to-transparent" />
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-aqua-900 shadow-[0_40px_100px_-30px_rgb(0_0_0/0.7)]">
+              <div className="absolute -inset-px rounded-[2.1rem] bg-gradient-to-br from-accent-400/70 via-brand-500/20 to-transparent" />
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-brand-900 shadow-[0_40px_100px_-30px_rgb(0_0_0/0.7)]">
                 <Image
                   src={hero.image.src}
                   alt={hero.image.alt}
@@ -129,8 +129,8 @@ export function Hero() {
                   className="object-cover object-[40%_center] transition-transform duration-[1200ms] ease-out group-hover:scale-105"
                 />
                 {/* Shift the photo's blue towards the brand teal */}
-                <div className="absolute inset-0 bg-aqua-500/45 mix-blend-color" />
-                <div className="absolute inset-0 bg-gradient-to-t from-aqua-950/50 via-transparent to-aqua-950/30" />
+                <div className="absolute inset-0 bg-brand-500/45 mix-blend-color" />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-950/50 via-transparent to-brand-950/30" />
                 <TalentNetwork className="absolute inset-0 size-full transition-transform duration-[1200ms] ease-out group-hover:scale-105" />
               </div>
             </motion.div>
@@ -142,18 +142,18 @@ export function Hero() {
               className="absolute -bottom-10 -left-6 size-36 sm:-left-12 sm:size-44"
               aria-hidden
             >
-              <div className="absolute inset-0 rounded-full bg-aqua-950/90 shadow-[0_20px_50px_-15px_rgb(0_0_0/0.7)] ring-1 ring-white/10 backdrop-blur-md" />
+              <div className="absolute inset-0 rounded-full bg-brand-950/90 shadow-[0_20px_50px_-15px_rgb(0_0_0/0.7)] ring-1 ring-white/10 backdrop-blur-md" />
               <div className="absolute inset-0 animate-spin-slow">
                 <svg viewBox="0 0 200 200" className="size-full">
                   <defs>
                     <path id="badge-circle" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0" />
                   </defs>
-                  <text className="fill-aqua-200 text-[15.5px] font-semibold uppercase tracking-[0.2em]">
+                  <text className="fill-brand-200 text-[15.5px] font-semibold uppercase tracking-[0.2em]">
                     <textPath href="#badge-circle">{hero.ring}</textPath>
                   </text>
                 </svg>
               </div>
-              <div className="absolute inset-[29%] grid place-items-center rounded-full bg-aqua-400 text-ink">
+              <div className="absolute inset-[29%] grid place-items-center rounded-full bg-accent-500 text-ink">
                 <Globe2 className="size-7 sm:size-9" strokeWidth={1.8} />
               </div>
             </motion.div>
@@ -162,9 +162,9 @@ export function Hero() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.9, delay: 1.3, ease: EASE }}
-              className="absolute -right-3 top-8 animate-float rounded-2xl border border-white/15 bg-aqua-950/75 px-4 py-3 shadow-xl backdrop-blur-md sm:-right-6"
+              className="absolute -right-3 top-8 animate-float rounded-2xl border border-white/15 bg-brand-950/75 px-4 py-3 shadow-xl backdrop-blur-md sm:-right-6"
             >
-              <p className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-aqua-300">{hero.chip.label}</p>
+              <p className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-accent-400">{hero.chip.label}</p>
               <p className="mt-0.5 font-display text-sm font-bold text-white sm:text-base">{hero.chip.value}</p>
             </motion.div>
           </motion.div>
@@ -176,7 +176,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
-        className="absolute inset-x-0 bottom-0 border-t border-white/10 bg-aqua-950/60 backdrop-blur-md"
+        className="absolute inset-x-0 bottom-0 border-t border-white/10 bg-brand-950/60 backdrop-blur-md"
       >
         <div className="mask-fade-x flex overflow-hidden py-5" aria-hidden>
           <div className="flex shrink-0 animate-marquee items-center [--marquee-duration:45s]">
@@ -188,7 +188,7 @@ export function Hero() {
                     className="flex items-center gap-8 whitespace-nowrap px-8 text-sm font-semibold uppercase tracking-[0.16em] text-white/60"
                   >
                     {s.title}
-                    <span className="size-1.5 rotate-45 bg-aqua-400" />
+                    <span className="size-1.5 rotate-45 bg-accent-500" />
                   </span>
                 ))}
               </div>

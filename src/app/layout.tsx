@@ -66,12 +66,12 @@ export const metadata: Metadata = {
   },
   referrer: "origin-when-cross-origin",
   other: {
-    "msapplication-TileColor": "#083636",
+    "msapplication-TileColor": "#0a2c5c",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: [{ color: "#042323" }],
+  themeColor: [{ color: "#061a3a" }],
   colorScheme: "light",
   width: "device-width",
   initialScale: 1,

@@ -13,7 +13,7 @@ export const siteConfig = {
   name: "SWS Global",
   shortName: "SWS Global",
   title: "SWS Global | Offshore Recruitment Services",
-  tagline: "Hire smarter. Scale faster.",
+  tagline: "Powering Businesses Beyond Boundaries",
   description:
     "SWS Global is an offshore recruitment partner offering sourcing, full-cycle recruitment, database management, lead generation, compliance and administrative support for growing businesses.",
   ogDescription:

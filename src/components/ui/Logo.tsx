@@ -1,49 +1,53 @@
+import Image from "next/image";
+
 type Props = {
-  /** `dark` text for light backgrounds, `light` text for dark backgrounds. */
+  /** `dark` = original colours for light backgrounds, `light` = white lettering for dark backgrounds. */
   variant?: "dark" | "light";
   className?: string;
+  eager?: boolean;
 };
 
-/** The globe-and-orbit symbol on its own (used in the logo and favicons). */
-export function LogoMark({ className = "" }: { className?: string }) {
+/**
+ * Horizontal SWS Global logo (globe + "SWS GLOBAL" wordmark), generated from
+ * public/images/logo/swsglobal-logo-dark-2.png. Size it with a text-size class:
+ * the globe is 2.5em tall and the wordmark 0.95em.
+ */
+export function Logo({ variant = "dark", className = "", eager = false }: Props) {
+  const loading = eager ? "eager" : "lazy";
   return (
-    <svg viewBox="0 0 48 48" className={className} aria-hidden focusable="false">
-      <rect width="48" height="48" rx="13" fill="#3dd9d9" />
-      <g fill="none" stroke="#083636" strokeWidth="2.6" strokeLinecap="round">
-        <circle cx="24" cy="24" r="11.5" />
-        <ellipse cx="24" cy="24" rx="5" ry="11.5" />
-        <path d="M12.5 24h23" />
-      </g>
-      <ellipse
-        cx="24"
-        cy="24"
-        rx="19"
-        ry="6.5"
-        transform="rotate(-28 24 24)"
-        fill="none"
-        stroke="#ffffff"
-        strokeWidth="2.4"
+    <span className={`inline-flex items-center gap-[0.45em] leading-none ${className}`}>
+      <Image
+        src="/images/logo/logo-mark.png"
+        alt=""
+        width={512}
+        height={512}
+        loading={loading}
+        sizes="64px"
+        className="h-[2.5em] w-auto shrink-0"
       />
-      <circle cx="39.6" cy="15.9" r="3.4" fill="#e01616" stroke="#ffffff" strokeWidth="1.6" />
-    </svg>
+      <Image
+        src={variant === "light" ? "/images/logo/wordmark-light.png" : "/images/logo/wordmark.png"}
+        alt="SWS Global"
+        width={900}
+        height={96}
+        loading={loading}
+        sizes="240px"
+        className="h-[0.95em] w-auto"
+      />
+    </span>
   );
 }
 
-/** SWS Global logo: symbol + "SWSGLOBAL" wordmark. Size it with a text-size class. */
-export function Logo({ variant = "dark", className = "" }: Props) {
-  const light = variant === "light";
+/** Full stacked logo with the "Powering businesses beyond boundaries" tagline. */
+export function LogoFull({ variant = "dark", className = "" }: Omit<Props, "eager">) {
   return (
-    <span
-      className={`inline-flex items-center gap-[0.45em] font-display leading-none tracking-[0.01em] ${className}`}
-    >
-      <LogoMark className="size-[1.55em] shrink-0" />
-      <span className="text-[1em] uppercase" aria-hidden>
-        <span className="font-extrabold text-[#30dbdb]">SWS</span>
-        <span className={`font-semibold transition-colors duration-500 ${light ? "text-white" : "text-ink"}`}>
-          GLOBAL
-        </span>
-      </span>
-      <span className="sr-only">SWS Global</span>
-    </span>
+    <Image
+      src={variant === "light" ? "/images/logo/logo-full-light.png" : "/images/logo/logo-full.png"}
+      alt="SWS Global — Powering businesses beyond boundaries"
+      width={960}
+      height={705}
+      sizes="240px"
+      className={className}
+    />
   );
 }

@@ -59,8 +59,8 @@ export function Header() {
         className={`fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,border-color] duration-500 ${
           solid
             ? menuOpen
-              ? "border-b border-white/10 bg-aqua-950"
-              : "border-b border-ink/5 bg-white/95 shadow-[0_8px_30px_-18px_rgb(4_35_35/0.35)] backdrop-blur-xl"
+              ? "border-b border-white/10 bg-brand-950"
+              : "border-b border-ink/5 bg-white/95 shadow-[0_8px_30px_-18px_rgb(6_26_58/0.35)] backdrop-blur-xl"
             : "border-b border-transparent bg-transparent"
         }`}
       >
@@ -71,7 +71,7 @@ export function Header() {
             aria-label="SWS Global — back to top"
             onClick={() => setMenuOpen(false)}
           >
-            <Logo variant={lightText || menuOpen ? "light" : "dark"} className="text-[1.15rem] sm:text-[1.3rem]" />
+            <Logo variant={lightText || menuOpen ? "light" : "dark"} eager className="text-[1rem] sm:text-[1.15rem]" />
           </a>
 
           <nav aria-label="Primary" className="hidden lg:block">
@@ -89,15 +89,15 @@ export function Header() {
                             ? "text-white"
                             : "text-white/75 hover:text-white"
                           : isActive
-                            ? "text-aqua-800"
-                            : "text-charcoal hover:text-aqua-700"
+                            ? "text-brand-800"
+                            : "text-charcoal hover:text-brand-700"
                       }`}
                     >
                       {isActive && (
                         <motion.span
                           layoutId="nav-pill"
                           className={`absolute inset-0 -z-10 rounded-full ${
-                            lightText ? "bg-white/12" : "bg-aqua-50 ring-1 ring-aqua-200/70"
+                            lightText ? "bg-white/12" : "bg-brand-50 ring-1 ring-brand-200/70"
                           }`}
                           transition={{ type: "spring", stiffness: 380, damping: 32 }}
                         />
@@ -115,8 +115,8 @@ export function Header() {
               href="#contact"
               className={`shine group hidden items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 sm:inline-flex ${
                 lightText || menuOpen
-                  ? "bg-aqua-400 text-ink hover:bg-aqua-300"
-                  : "bg-ink text-white hover:bg-aqua-800"
+                  ? "bg-accent-500 text-ink hover:bg-accent-400"
+                  : "bg-ink text-white hover:bg-brand-800"
               }`}
             >
               <span className="relative z-[2]">Get in touch</span>
@@ -164,14 +164,14 @@ export function Header() {
         {menuOpen && (
           <motion.div
             id="mobile-menu"
-            className="fixed inset-0 z-40 overflow-y-auto bg-aqua-950 pt-[var(--header-height)] lg:hidden"
+            className="fixed inset-0 z-40 overflow-y-auto bg-brand-950 pt-[var(--header-height)] lg:hidden"
             initial={{ clipPath: "circle(0% at 100% 0%)" }}
             animate={{ clipPath: "circle(150% at 100% 0%)" }}
             exit={{ clipPath: "circle(0% at 100% 0%)" }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="pointer-events-none absolute -right-24 top-24 size-80 rounded-full bg-aqua-500/25 blur-3xl" />
-            <div className="pointer-events-none absolute -left-24 bottom-10 size-72 rounded-full bg-aqua-400/15 blur-3xl" />
+            <div className="pointer-events-none absolute -right-24 top-24 size-80 rounded-full bg-brand-500/25 blur-3xl" />
+            <div className="pointer-events-none absolute -left-24 bottom-10 size-72 rounded-full bg-accent-500/15 blur-3xl" />
             <nav aria-label="Mobile" className="container-x relative flex min-h-full flex-col pb-10 pt-8">
               <motion.ul
                 className="flex flex-col"
@@ -194,12 +194,12 @@ export function Header() {
                       className="group flex items-center justify-between py-4 font-display text-2xl font-semibold text-white sm:text-3xl"
                     >
                       <span className="flex items-baseline gap-4">
-                        <span className="text-xs font-medium text-aqua-400">0{i + 1}</span>
-                        <span className="transition-colors group-hover:text-aqua-300">{link.label}</span>
+                        <span className="text-xs font-medium text-accent-500">0{i + 1}</span>
+                        <span className="transition-colors group-hover:text-accent-400">{link.label}</span>
                       </span>
                       <ArrowRight
                         aria-hidden
-                        className="size-5 text-aqua-400 transition-transform group-hover:translate-x-1"
+                        className="size-5 text-accent-500 transition-transform group-hover:translate-x-1"
                       />
                     </a>
                   </motion.li>
@@ -213,18 +213,18 @@ export function Header() {
               >
                 {siteConfig.email && (
                   <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-3 hover:text-white">
-                    <Mail aria-hidden className="size-4 text-aqua-400" /> {siteConfig.email}
+                    <Mail aria-hidden className="size-4 text-accent-500" /> {siteConfig.email}
                   </a>
                 )}
                 {siteConfig.phones[0] && (
                   <a href={siteConfig.phones[0].href} className="flex items-center gap-3 hover:text-white">
-                    <Phone aria-hidden className="size-4 text-aqua-400" /> {siteConfig.phones[0].display}
+                    <Phone aria-hidden className="size-4 text-accent-500" /> {siteConfig.phones[0].display}
                   </a>
                 )}
                 <a
                   href="#contact"
                   onClick={() => setMenuOpen(false)}
-                  className="inline-flex items-center gap-2 rounded-full bg-aqua-400 px-6 py-3 text-sm font-semibold text-ink transition hover:bg-aqua-300"
+                  className="inline-flex items-center gap-2 rounded-full bg-accent-500 px-6 py-3 text-sm font-semibold text-ink transition hover:bg-accent-400"
                 >
                   Get in touch <ArrowRight aria-hidden className="size-4" />
                 </a>
