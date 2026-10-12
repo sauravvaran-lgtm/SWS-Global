@@ -28,7 +28,6 @@ Text in **[square brackets]** on the page is a placeholder for SWS Global's own 
 
 | What | Where to edit |
 | --- | --- |
-| Stats (clients, years, recruiters, satisfaction) — currently shown as `XX` | `stats` in `src/lib/content.ts` |
 | Client testimonials | `testimonials` in `src/lib/content.ts` (use real quotes, with permission) |
 | Office address, phone numbers, email | `src/lib/site.ts` |
 | Social media links, X/Twitter handle | `src/lib/site.ts` (empty links are hidden) |

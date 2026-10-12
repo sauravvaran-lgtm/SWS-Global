@@ -2,7 +2,7 @@
  * All website copy lives here so it can be edited in one place.
  *
  * Anything in [square brackets] is a placeholder for SWS Global's own facts
- * (figures and client testimonials). Replace it before going live, or
+ * (client testimonials). Replace it before going live, or
  * remove the section if it does not apply yet.
  *
  * Photos are free-to-use images from Unsplash (see README for credits).
@@ -49,12 +49,12 @@ export const about = {
   },
 };
 
-/** TODO: replace `value: null` with SWS Global's real figures. */
+/** Key figures shown in the stats band (set `value: null` to show an "XX" placeholder). */
 export const stats: { value: number | null; suffix: string; label: string }[] = [
-  { value: null, suffix: "+", label: "Clients served" },
-  { value: null, suffix: "+", label: "Years of experience" },
-  { value: null, suffix: "+", label: "Recruiters" },
-  { value: null, suffix: "%", label: "Client satisfaction" },
+  { value: 4, suffix: "", label: "Clients Served" },
+  { value: 2, suffix: "", label: "Years of Experience" },
+  { value: 26, suffix: "", label: "Extended Teammate" },
+  { value: 96, suffix: "%", label: "Client Satisfaction (NPS)" },
 ];
 
 export const servicesIntro = {
