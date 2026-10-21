@@ -55,7 +55,7 @@ export function Footer() {
       <div className="container-x relative grid gap-12 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_1.2fr_1.1fr] lg:gap-10 lg:py-16">
         <div>
           <a href="#home" aria-label="SWS Global — back to top" className="inline-block">
-            <LogoFull variant="light" className="h-auto w-52" />
+            <LogoFull className="h-auto w-44" />
           </a>
           <p className="mt-6 max-w-xs text-sm leading-relaxed text-white/60">{siteConfig.description}</p>
           {socials.length > 0 && (

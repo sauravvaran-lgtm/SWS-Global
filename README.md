@@ -65,13 +65,14 @@ public/
 
 ## Logo
 
-All variants are generated from the master file `public/images/logo/swsglobal-logo-dark-2.png`:
+Header and footer logos are generated from the master file `public/images/logo/sws-logo-master.png`:
 
-- `logo-full.png` / `logo-full-light.png` — full stacked logo with tagline (light = white lettering for dark backgrounds)
-- `logo-mark.png` — the globe symbol on its own
-- `wordmark.png` / `wordmark-light.png` — the "SWS GLOBAL" lettering, used with the globe in the header
-- Favicons: `src/app/icon.png`, `src/app/apple-icon.png`, `public/images/icon-192.png`, `public/images/icon-512.png`
-- Components: `Logo` (header, horizontal) and `LogoFull` (footer) in `src/components/ui/Logo.tsx`
+- `sws-emblem-light.png` / `sws-emblem-dark.png` — globe emblem (light = for dark backgrounds, dark = keeps its navy disc for white backgrounds)
+- `sws-wordmark-light.png` / `sws-wordmark-dark.png` — the "SWS GLOBAL" lettering
+- `sws-logo-stacked.png` — full logo with tagline, used in the footer
+- Components: `Logo` (header) and `LogoFull` (footer) in `src/components/ui/Logo.tsx`
+- Favicons and the social share image still use the earlier blue-globe artwork
+  (`swsglobal-logo-dark-2.png`, `logo-mark.png`, `wordmark-light.png`, `logo-full.png`)
 
 ## Connecting the contact form
 

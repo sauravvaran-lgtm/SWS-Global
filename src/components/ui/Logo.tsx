@@ -1,52 +1,54 @@
 import Image from "next/image";
 
 type Props = {
-  /** `dark` = original colours for light backgrounds, `light` = white lettering for dark backgrounds. */
+  /** `dark` for white backgrounds (navy lettering), `light` for dark backgrounds. */
   variant?: "dark" | "light";
   className?: string;
   eager?: boolean;
 };
 
 /**
- * Horizontal SWS Global logo (globe + "SWS GLOBAL" wordmark), generated from
- * public/images/logo/swsglobal-logo-dark-2.png. Size it with a text-size class:
- * the globe is 2.5em tall and the wordmark 0.95em.
+ * Horizontal SWS Global logo (globe emblem + "SWS GLOBAL" wordmark) for the header,
+ * generated from public/images/logo/sws-logo-master.png. Size it with a text-size class.
+ * `light` blends into dark backgrounds; `dark` keeps the emblem's navy disc and
+ * uses navy lettering so it reads on white.
  */
 export function Logo({ variant = "dark", className = "", eager = false }: Props) {
   const loading = eager ? "eager" : "lazy";
+  const light = variant === "light";
   return (
-    <span className={`inline-flex items-center gap-[0.45em] leading-none ${className}`}>
+    <span className={`inline-flex items-center gap-[0.5em] leading-none ${className}`}>
       <Image
-        src="/images/logo/logo-mark.png"
+        src={light ? "/images/logo/sws-emblem-light.png" : "/images/logo/sws-emblem-dark.png"}
         alt=""
-        width={512}
-        height={512}
+        width={542}
+        height={542}
         loading={loading}
         sizes="64px"
         className="h-[2.5em] w-auto shrink-0"
       />
       <Image
-        src={variant === "light" ? "/images/logo/wordmark-light.png" : "/images/logo/wordmark.png"}
+        src={light ? "/images/logo/sws-wordmark-light.png" : "/images/logo/sws-wordmark-dark.png"}
         alt="SWS Global"
-        width={900}
-        height={96}
+        width={810}
+        height={110}
         loading={loading}
-        sizes="240px"
-        className="h-[0.95em] w-auto"
+        sizes="200px"
+        className="h-[1.05em] w-auto"
       />
     </span>
   );
 }
 
-/** Full stacked logo with the "Powering businesses beyond boundaries" tagline. */
-export function LogoFull({ variant = "dark", className = "" }: Omit<Props, "eager">) {
+/** Full stacked logo with the "Powering businesses beyond boundaries" tagline (for dark backgrounds). */
+export function LogoFull({ className = "" }: { className?: string }) {
   return (
     <Image
-      src={variant === "light" ? "/images/logo/logo-full-light.png" : "/images/logo/logo-full.png"}
+      src="/images/logo/sws-logo-stacked.png"
       alt="SWS Global — Powering businesses beyond boundaries"
-      width={960}
-      height={705}
-      sizes="240px"
+      width={814}
+      height={982}
+      sizes="200px"
       className={className}
     />
   );
