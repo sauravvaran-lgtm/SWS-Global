@@ -52,9 +52,9 @@ export const about = {
 
 /** Key figures shown in the stats band (set `value: null` to show an "XX" placeholder). */
 export const stats: { value: number | null; suffix: string; label: string }[] = [
-  { value: 4, suffix: "", label: "Clients Served" },
-  { value: 2, suffix: "", label: "Years of Experience" },
-  { value: 26, suffix: "", label: "Extended Teammate" },
+  { value: 6, suffix: "", label: "Clients Served" },
+  { value: 15, suffix: "+", label: "Years of Experience" },
+  { value: 60, suffix: "+", label: "Extended Teammate" },
   { value: 96, suffix: "%", label: "Client Satisfaction (NPS)" },
 ];
 
