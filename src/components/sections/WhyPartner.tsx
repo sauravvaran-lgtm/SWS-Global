@@ -19,8 +19,6 @@ const icons = [GraduationCap, UserRoundCog, UserCheck, Clock4, ShieldCheck, Slid
 export function WhyPartner() {
   return (
     <section id="why-us" aria-labelledby="why-title" className="section-y relative overflow-hidden bg-white">
-      <div className="absolute -left-48 top-1/3 size-[30rem] rounded-full bg-brand-200/50 blur-[120px]" />
-
       <div className="container-x relative grid items-center gap-14 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
         <div>
           <SectionHeading id="why-title" eyebrow={whyPartner.eyebrow} title={whyPartner.title} />
@@ -51,7 +49,7 @@ export function WhyPartner() {
 
         <Reveal direction="left" distance={48}>
           <div className="group/frame relative">
-            <div className="absolute -inset-3 rotate-2 rounded-[2rem] bg-gradient-to-br from-brand-400 via-brand-500 to-brand-800 opacity-90 transition-transform duration-700 group-hover/frame:rotate-0 sm:-inset-4" />
+            <div className="absolute -inset-3 rotate-2 rounded-[2rem] bg-brand-600 transition-transform duration-700 group-hover/frame:rotate-0 sm:-inset-4" />
             <div className="relative overflow-hidden rounded-[1.75rem] bg-ink p-2.5 shadow-2xl">
               <div className="relative aspect-[4/3] overflow-hidden rounded-[1.4rem]">
                 <Image

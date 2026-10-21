@@ -170,8 +170,6 @@ export function Header() {
             exit={{ clipPath: "circle(0% at 100% 0%)" }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="pointer-events-none absolute -right-24 top-24 size-80 rounded-full bg-brand-500/25 blur-3xl" />
-            <div className="pointer-events-none absolute -left-24 bottom-10 size-72 rounded-full bg-accent-500/15 blur-3xl" />
             <nav aria-label="Mobile" className="container-x relative flex min-h-full flex-col pb-10 pt-8">
               <motion.ul
                 className="flex flex-col"

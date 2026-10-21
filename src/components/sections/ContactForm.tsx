@@ -166,7 +166,7 @@ export function ContactForm() {
       style={{ minHeight: lockedHeight }}
       className="relative flex h-full flex-col overflow-hidden rounded-[2rem] bg-white p-6 shadow-[0_30px_80px_-40px_rgb(26_45_70/0.45)] ring-1 ring-ink/5 sm:p-10"
     >
-      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand-600 via-brand-400 to-accent-500" />
+      <div className="absolute inset-x-0 top-0 h-1 bg-accent-500" />
 
       <AnimatePresence mode="wait" initial={false}>
         {status === "success" ? (

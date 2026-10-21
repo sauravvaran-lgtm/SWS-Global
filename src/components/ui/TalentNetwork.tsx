@@ -45,20 +45,7 @@ export function TalentNetwork({ className = "" }: { className?: string }) {
             <feMergeNode in="SourceGraphic" />
           </feMerge>
         </filter>
-        <radialGradient id="tn-palm" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#ffffff" stopOpacity="0.95" />
-          <stop offset="35%" stopColor="#8daad2" stopOpacity="0.55" />
-          <stop offset="100%" stopColor="#e0773d" stopOpacity="0" />
-        </radialGradient>
-        <linearGradient id="tn-beam" x1="0" y1="1" x2="0" y2="0">
-          <stop offset="0%" stopColor="#8daad2" stopOpacity="0.45" />
-          <stop offset="100%" stopColor="#8daad2" stopOpacity="0" />
-        </linearGradient>
       </defs>
-
-      {/* Light rising from the palm */}
-      <path d="M176 362 L224 362 L292 120 L108 120 Z" fill="url(#tn-beam)" opacity="0.55" />
-      <ellipse cx="200" cy="362" rx="92" ry="26" fill="url(#tn-palm)" className="animate-pulse [animation-duration:3s]" />
 
       <g className="animate-float">
         {/* Connections */}

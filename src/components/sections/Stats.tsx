@@ -9,11 +9,7 @@ export function Stats() {
   return (
     <section aria-label="SWS Global in numbers" className="relative bg-white pb-20 lg:pb-28">
       <div className="container-x">
-        <div className="noise relative overflow-hidden rounded-[2rem] bg-brand-900 px-6 py-12 sm:px-10 lg:px-14 lg:py-16">
-          <div className="bg-grid absolute inset-0 opacity-60" />
-          <div className="absolute -left-20 -top-24 size-72 animate-drift rounded-full bg-brand-500/30 blur-3xl" />
-          <div className="absolute -bottom-24 right-0 size-72 animate-drift rounded-full bg-accent-500/20 blur-3xl [animation-delay:-8s]" />
-
+        <div className="relative overflow-hidden rounded-[2rem] bg-brand-900 px-6 py-12 sm:px-10 lg:px-14 lg:py-16">
           <Stagger as="ul" className="relative grid grid-cols-2 gap-y-10 lg:grid-cols-4" stagger={0.12}>
             {stats.map((stat, i) => {
               const Icon = icons[i];

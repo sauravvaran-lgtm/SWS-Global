@@ -29,14 +29,9 @@ export function Hero() {
       ref={ref}
       id="home"
       aria-labelledby="hero-title"
-      className="noise relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-brand-950 text-white"
+      className="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-brand-950 text-white"
     >
       {/* Background layers */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,var(--color-brand-800)_0%,transparent_55%)]" />
-      <div className="bg-grid absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_40%_40%,#000_15%,transparent_75%)]" />
-      <div className="absolute -left-40 top-1/4 -z-10 size-[34rem] animate-drift rounded-full bg-brand-500/25 blur-[120px]" />
-      <div className="absolute -right-32 bottom-0 -z-10 size-[30rem] animate-drift rounded-full bg-accent-500/20 blur-[120px] [animation-delay:-6s]" />
-
       <div className="container-x relative flex flex-1 items-center pb-32 pt-[calc(var(--header-height)+2.5rem)] sm:pb-36 lg:pb-40">
         <div className="grid w-full items-center gap-14 lg:grid-cols-[1.4fr_1fr] lg:gap-12 xl:gap-16">
           <motion.div style={parallax ? { y: contentY, opacity: fade } : undefined}>
@@ -64,7 +59,7 @@ export function Hero() {
                 </span>
               ))}
               <span className="inline-block overflow-hidden pb-[0.12em] align-bottom">
-                <span className="hero-word text-gradient relative" style={delay(0.25 + words.length * 0.05)}>
+                <span className="hero-word text-accent-500 relative" style={delay(0.25 + words.length * 0.05)}>
                   {hero.titleAccent}
                   <svg
                     aria-hidden
@@ -118,8 +113,7 @@ export function Hero() {
               transition={{ duration: 1.1, delay: 0.5, ease: EASE }}
               className="group relative"
             >
-              <div className="absolute -inset-px rounded-[2.1rem] bg-gradient-to-br from-accent-400/70 via-brand-500/20 to-transparent" />
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-brand-900 shadow-[0_40px_100px_-30px_rgb(0_0_0/0.7)]">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-brand-900 ring-1 ring-white/10 shadow-[0_40px_100px_-30px_rgb(0_0_0/0.7)]">
                 <Image
                   src={hero.image.src}
                   alt={hero.image.alt}
@@ -130,7 +124,7 @@ export function Hero() {
                 />
                 {/* Shift the photo's blue towards the brand teal */}
                 <div className="absolute inset-0 bg-brand-500/45 mix-blend-color" />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-950/50 via-transparent to-brand-950/30" />
+                <div className="absolute inset-0 bg-brand-950/20" />
                 <TalentNetwork className="absolute inset-0 size-full transition-transform duration-[1200ms] ease-out group-hover:scale-105" />
               </div>
             </motion.div>

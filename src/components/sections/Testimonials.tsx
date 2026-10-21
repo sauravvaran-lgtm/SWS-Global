@@ -17,7 +17,7 @@ function QuoteBody({ quote, name, role }: { quote: string; name: string; role: s
         “{quote}”
       </blockquote>
       <figcaption className="mt-7 flex items-center gap-4">
-        <span className="grid size-12 shrink-0 place-items-center rounded-full bg-gradient-to-br from-accent-400 to-accent-600 font-display text-sm font-bold text-ink">
+        <span className="grid size-12 shrink-0 place-items-center rounded-full bg-accent-500 font-display text-sm font-bold text-ink">
           {name}
         </span>
         <span>
@@ -179,12 +179,8 @@ export function Testimonials() {
     <section
       id="testimonials"
       aria-labelledby="testimonials-title"
-      className="section-y noise relative overflow-hidden bg-brand-950 text-white"
+      className="section-y relative overflow-hidden bg-brand-950 text-white"
     >
-      <div className="bg-grid absolute inset-0 opacity-50 [mask-image:linear-gradient(to_bottom,#000,transparent_70%)]" />
-      <div className="absolute -right-40 top-10 size-[34rem] animate-drift rounded-full bg-brand-500/20 blur-[130px]" />
-      <div className="absolute -left-40 bottom-0 size-[28rem] animate-drift rounded-full bg-accent-500/10 blur-[120px] [animation-delay:-9s]" />
-
       <div className="container-x relative grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <Reveal direction="right" distance={48} className="relative order-2 lg:order-1">
           <div className="group relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-[2rem] ring-1 ring-white/10 lg:max-w-none">
@@ -195,7 +191,7 @@ export function Testimonials() {
               sizes="(min-width: 1240px) 500px, (min-width: 1024px) 40vw, 92vw"
               className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-brand-950/10 to-transparent" />
+            <div className="absolute inset-0 bg-brand-950/20" />
             <div className="absolute inset-x-5 bottom-5 flex items-center gap-3 rounded-2xl border border-white/15 bg-brand-950/70 p-4 backdrop-blur-md sm:inset-x-6 sm:bottom-6">
               <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-accent-500 text-ink">
                 <Quote aria-hidden className="size-5 fill-current" />

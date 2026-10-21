@@ -17,11 +17,8 @@ export function Expertise() {
     <section
       id="expertise"
       aria-labelledby="expertise-title"
-      className="section-y noise relative overflow-hidden bg-brand-950 text-white"
+      className="section-y relative overflow-hidden bg-brand-950 text-white"
     >
-      <div className="bg-grid absolute inset-0 opacity-50 [mask-image:radial-gradient(ellipse_at_center,#000_25%,transparent_75%)]" />
-      <div className="absolute -right-40 -top-20 size-[30rem] animate-drift rounded-full bg-brand-500/20 blur-[130px]" />
-
       <div className="container-x relative">
         <SectionHeading
           id="expertise-title"

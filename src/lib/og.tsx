@@ -24,21 +24,10 @@ export function renderOgImage() {
           justifyContent: "space-between",
           padding: "64px 72px",
           color: "#ffffff",
-          background: "linear-gradient(135deg, #121f31 0%, #1a2d46 55%, #213a5a 100%)",
+          background: "#121f31",
           position: "relative",
         }}
       >
-        <div
-          style={{
-            position: "absolute",
-            right: -160,
-            top: -160,
-            width: 560,
-            height: 560,
-            borderRadius: 9999,
-            background: "radial-gradient(circle, rgba(224,119,61,0.45) 0%, rgba(224,119,61,0) 70%)",
-          }}
-        />
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}

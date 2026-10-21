@@ -15,8 +15,6 @@ export function Contact() {
 
   return (
     <section id="contact" aria-labelledby="contact-title" className="section-y relative overflow-hidden bg-white">
-      <div className="bg-dots pointer-events-none absolute inset-x-0 top-0 h-96 [mask-image:linear-gradient(to_bottom,#000,transparent)]" />
-
       <div className="container-x relative">
         <SectionHeading
           id="contact-title"
@@ -28,10 +26,7 @@ export function Contact() {
 
         <div className="mt-14 grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:gap-8">
           <Reveal direction="right" distance={40} className="h-full">
-            <aside className="noise relative flex h-full flex-col overflow-hidden rounded-[2rem] bg-brand-900 p-7 text-white sm:p-10">
-              <div className="absolute -right-24 -top-24 size-72 animate-drift rounded-full bg-brand-400/30 blur-3xl" />
-              <div className="bg-grid absolute inset-0 opacity-50 [mask-image:linear-gradient(to_top,#000,transparent)]" />
-
+            <aside className="relative flex h-full flex-col overflow-hidden rounded-[2rem] bg-brand-900 p-7 text-white sm:p-10">
               <div className="relative">
                 <h3 className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-accent-500">
                   <MapPin aria-hidden className="size-4" /> Office

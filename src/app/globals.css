@@ -182,51 +182,10 @@ section[id] {
     }
   }
 
-  /* Highlight text in the accent orange (kept flat for the matte look) */
-  .text-gradient {
-    background-image: linear-gradient(
-      100deg,
-      var(--color-accent-400) 0%,
-      var(--color-accent-500) 55%,
-      var(--color-accent-600) 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
 
-  .text-gradient-dark {
-    background-image: linear-gradient(
-      100deg,
-      var(--color-brand-600) 0%,
-      var(--color-brand-500) 55%,
-      var(--color-brand-700) 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
 
-  .bg-grid {
-    background-image:
-      linear-gradient(to right, rgb(92 134 187 / 0.09) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(92 134 187 / 0.09) 1px, transparent 1px);
-    background-size: 56px 56px;
-  }
 
-  .bg-dots {
-    background-image: radial-gradient(rgb(47 87 136 / 0.18) 1px, transparent 1px);
-    background-size: 22px 22px;
-  }
 
-  .noise::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.05;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
 
   /* Diagonal light sweep used on buttons and cards on hover */
   .shine {
@@ -242,12 +201,7 @@ section[id] {
     width: 45%;
     z-index: 1;
     pointer-events: none;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgb(255 255 255 / 0.45),
-      transparent
-    );
+    background: rgb(255 255 255 / 0.18);
     transform: translateX(-120%) skewX(-20deg);
   }
 

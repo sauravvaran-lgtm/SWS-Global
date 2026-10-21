@@ -11,8 +11,6 @@ export function Services() {
       aria-labelledby="services-title"
       className="section-y relative overflow-hidden bg-mist"
     >
-      <div className="absolute -right-40 top-20 size-[30rem] rounded-full bg-brand-200/40 blur-[120px]" />
-
       <div className="container-x relative">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
@@ -48,7 +46,7 @@ export function Services() {
                     sizes="(min-width: 1240px) 290px, (min-width: 1024px) 23vw, (min-width: 640px) 48vw, 100vw"
                     className="object-cover grayscale transition-[transform,filter] duration-[900ms] ease-out group-hover:scale-110 group-hover:grayscale-0"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-brand-900/10 to-transparent mix-blend-multiply transition-opacity duration-500 group-hover:opacity-70" />
+                  <div className="absolute inset-0 bg-brand-950/25 transition-opacity duration-500 group-hover:opacity-0" />
                   <div className="absolute inset-0 bg-brand-500/0 mix-blend-color transition-colors duration-500 group-hover:bg-brand-500/35" />
                   <span className="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-1 font-display text-xs font-bold tracking-wider text-brand-800 backdrop-blur">
                     {String(i + 1).padStart(2, "0")}
@@ -56,7 +54,7 @@ export function Services() {
                 </div>
 
                 <div className="relative flex flex-1 flex-col p-6">
-                  <span className="absolute inset-x-6 top-0 h-0.5 origin-left scale-x-0 bg-gradient-to-r from-brand-500 to-accent-500 transition-transform duration-500 group-hover:scale-x-100" />
+                  <span className="absolute inset-x-6 top-0 h-0.5 origin-left scale-x-0 bg-accent-500 transition-transform duration-500 group-hover:scale-x-100" />
                   <h3 className="font-display text-lg font-bold leading-snug text-ink transition-colors duration-300 group-hover:text-brand-700">
                     {service.title}
                   </h3>

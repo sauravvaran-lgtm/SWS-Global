@@ -15,7 +15,7 @@ function Avatar({ name, size = "lg" }: { name: string; size?: "lg" | "md" }) {
   return (
     <span
       aria-hidden
-      className={`relative grid shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-brand-700 to-brand-950 font-display font-bold text-white ring-1 ring-white/10 transition-transform duration-500 group-hover:-rotate-3 group-hover:scale-105 ${
+      className={`relative grid shrink-0 place-items-center rounded-2xl bg-brand-800 font-display font-bold text-white ring-1 ring-white/10 transition-transform duration-500 group-hover:-rotate-3 group-hover:scale-105 ${
         size === "lg" ? "size-16 text-xl" : "size-14 text-lg"
       }`}
     >
@@ -28,9 +28,6 @@ function Avatar({ name, size = "lg" }: { name: string; size?: "lg" | "md" }) {
 export function About() {
   return (
     <section id="about" aria-labelledby="about-title" className="section-y relative overflow-hidden bg-white">
-      <div className="bg-dots pointer-events-none absolute right-0 top-0 h-80 w-1/2 [mask-image:linear-gradient(to_bottom,#000,transparent)]" />
-      <div className="absolute -left-48 top-1/3 size-[28rem] rounded-full bg-brand-100/60 blur-[120px]" />
-
       <div className="container-x relative">
         <SectionHeading
           id="about-title"
@@ -51,7 +48,7 @@ export function About() {
           {about.executives.map((person) => (
             <StaggerItem as="li" key={person.name} className="h-full">
               <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-white p-7 shadow-[0_2px_24px_-12px_rgb(18_31_49/0.25)] ring-1 ring-ink/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-25px_rgb(26_45_70/0.45)] hover:ring-accent-400 sm:p-8">
-                <span className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-brand-500 to-accent-500 transition-transform duration-500 group-hover:scale-x-100" />
+                <span className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-accent-500 transition-transform duration-500 group-hover:scale-x-100" />
                 <div className="flex items-center gap-4">
                   <Avatar name={person.name} />
                   <div>

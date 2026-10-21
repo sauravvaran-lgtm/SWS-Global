@@ -25,19 +25,17 @@ export function Footer() {
   const { address, phones, email } = siteConfig;
 
   return (
-    <footer className="noise relative overflow-hidden bg-brand-950 text-white" aria-labelledby="footer-heading">
+    <footer className="relative overflow-hidden bg-brand-950 text-white" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="absolute -top-40 left-1/2 size-[40rem] -translate-x-1/2 rounded-full bg-brand-600/25 blur-[140px]" />
-
       {/* CTA band */}
       <div className="container-x relative">
         <div className="flex flex-col items-start justify-between gap-8 border-b border-white/10 py-14 md:flex-row md:items-center lg:py-16">
           <p className="max-w-2xl font-display text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
             Powering businesses
             <br />
-            <span className="text-gradient">beyond boundaries.</span>
+            <span className="text-accent-500">beyond boundaries.</span>
           </p>
           <a
             href="#contact"
