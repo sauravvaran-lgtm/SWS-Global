@@ -74,6 +74,22 @@ export const about = {
   ],
 } as const;
 
+export const approach = {
+  eyebrow: "How we work",
+  title: "Our Approach",
+  description:
+    "We combine strategic thinking, proactive business development, and structured execution to help clients grow without unnecessary overheads. From healthcare recruitment support to data entry, chat support, and back-office operations, we provide flexible manpower solutions designed around each client's needs.",
+  highlights: [
+    { id: "experience", title: "20+ Years", text: "Experience in Growing Offshore Solutions" },
+    { id: "delivery", title: "Global Delivery", text: "UK, US, Europe, Australia & Globally" },
+    { id: "specialists", title: "Industry Specialists", text: "Healthcare, Education, IT, Compliance, Accounting, Back Office" },
+    { id: "bot", title: "BOT Model", text: "Build. Operate. Transfer." },
+    { id: "operations", title: "24×7 Operations", text: "Round-the-clock support & delivery" },
+    { id: "scalable", title: "Scalable & Flexible", text: "Scale dynamically as per business need" },
+    { id: "track-record", title: "Proven Track Record", text: "Of Growing Businesses Successfully" },
+  ],
+} as const;
+
 /** Key figures shown in the stats band (set `value: null` to show an "XX" placeholder). */
 export const stats: { value: number | null; suffix: string; label: string }[] = [
   { value: 6, suffix: "", label: "Clients Served" },

@@ -4,6 +4,7 @@ import { ScrollProgress } from "@/components/layout/ScrollProgress";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
+import { Approach } from "@/components/sections/Approach";
 import { Stats } from "@/components/sections/Stats";
 import { Services } from "@/components/sections/Services";
 import { Expertise } from "@/components/sections/Expertise";
@@ -22,6 +23,7 @@ export default function Home() {
       <main id="main">
         <Hero />
         <About />
+        <Approach />
         <Stats />
         <Services />
         <Expertise />
