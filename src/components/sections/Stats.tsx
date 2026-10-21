@@ -7,7 +7,7 @@ const icons = [Building2, Briefcase, Users, Smile];
 
 export function Stats() {
   return (
-    <section aria-label="SWS Global in numbers" className="relative bg-white pb-20 lg:pb-28">
+    <section aria-label="SWS Global in numbers" className="relative bg-white py-20 lg:py-28">
       <div className="container-x">
         <div className="relative overflow-hidden rounded-[2rem] bg-brand-900 px-6 py-12 sm:px-10 lg:px-14 lg:py-16">
           <Stagger as="ul" className="relative grid grid-cols-2 gap-y-10 lg:grid-cols-4" stagger={0.12}>
