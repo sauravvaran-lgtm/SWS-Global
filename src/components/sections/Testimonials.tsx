@@ -10,6 +10,25 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const AUTOPLAY_MS = 7000;
 
+function QuoteBody({ quote, name, role }: { quote: string; name: string; role: string }) {
+  return (
+    <>
+      <blockquote className="font-display text-base font-medium leading-relaxed text-white text-pretty sm:text-lg">
+        “{quote}”
+      </blockquote>
+      <figcaption className="mt-7 flex items-center gap-4">
+        <span className="grid size-12 shrink-0 place-items-center rounded-full bg-gradient-to-br from-accent-400 to-accent-600 font-display text-sm font-bold text-ink">
+          {name}
+        </span>
+        <span>
+          <span className="block font-semibold text-white">{name}</span>
+          {role && <span className="block text-sm text-brand-200/80">{role}</span>}
+        </span>
+      </figcaption>
+    </>
+  );
+}
+
 function QuoteCarousel() {
   const [[index, direction], setState] = useState<[number, number]>([0, 1]);
   const [paused, setPaused] = useState(false);
@@ -56,7 +75,13 @@ function QuoteCarousel() {
         </p>
       </div>
 
-      <div className="relative mt-8 min-h-[13rem] sm:min-h-[11rem]">
+      {/* All quotes are stacked in one grid cell (invisible) so the box is as tall as the longest one */}
+      <div className="relative mt-8 grid">
+        {testimonials.map((t, i) => (
+          <figure key={i} aria-hidden className="invisible [grid-area:1/1]">
+            <QuoteBody quote={t.quote} name={t.name} role={t.role} />
+          </figure>
+        ))}
         <AnimatePresence mode="wait" custom={direction} initial={false}>
           <motion.figure
             key={index}
@@ -74,21 +99,10 @@ function QuoteCarousel() {
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={0.3}
             onDragEnd={onDragEnd}
-            className="cursor-grab touch-pan-y active:cursor-grabbing"
+            className="cursor-grab touch-pan-y self-start [grid-area:1/1] active:cursor-grabbing"
             aria-hidden
           >
-            <blockquote className="font-display text-xl font-medium leading-relaxed text-white text-pretty sm:text-2xl">
-              “{current.quote}”
-            </blockquote>
-            <figcaption className="mt-7 flex items-center gap-4">
-              <span className="grid size-12 shrink-0 place-items-center rounded-full bg-gradient-to-br from-accent-400 to-accent-600 text-ink">
-                <Quote aria-hidden className="size-4 fill-current" />
-              </span>
-              <span>
-                <span className="block font-semibold text-white">{current.name}</span>
-                {current.role && <span className="block text-sm text-brand-200/80">{current.role}</span>}
-              </span>
-            </figcaption>
+            <QuoteBody quote={current.quote} name={current.name} role={current.role} />
           </motion.figure>
         </AnimatePresence>
       </div>

@@ -1,9 +1,6 @@
 /**
  * All website copy lives here so it can be edited in one place.
  *
- * Anything in [square brackets] is a placeholder for SWS Global's own facts
- * (client testimonials). Replace it before going live, or
- * remove the section if it does not apply yet.
  *
  * Photos are free-to-use images from Unsplash (see README for credits).
  */
@@ -131,7 +128,6 @@ export const services = [
   },
 ] as const;
 
-/** TODO: replace with real quotes from SWS Global clients (with their permission). */
 export const testimonialsIntro = {
   eyebrow: "What clients say",
   title: "Success Stories",
@@ -142,21 +138,25 @@ export const testimonialsIntro = {
   },
 };
 
+/** Client testimonials (shown by initials and job title). */
 export const testimonials = [
   {
-    quote: "[Client testimonial — add a short quote from an SWS Global client here.]",
-    name: "[Client name]",
-    role: "[Job title, Company]",
+    quote:
+      "Since partnering with SWS Global, the experience has been really positive. We started with one team member on a trial basis, and within five months, we’ve grown to a team of four based on the results delivered. What really stands out is the honest communication and the way their leadership approaches the partnership. The conversations are always focused on how we can improve our business, strengthen our brand, and create long-term growth, rather than simply adding more headcount. It genuinely feels like having a partner who is invested in our success.",
+    name: "CP",
+    role: "Managing Director",
   },
   {
-    quote: "[Client testimonial — add a short quote from an SWS Global client here.]",
-    name: "[Client name]",
-    role: "[Job title, Company]",
+    quote:
+      "The team at SWS Global has been great to work with. They’re professional, approachable, and always ready to help. Their understanding of our requirements and focus on delivering results have helped us streamline processes, improve efficiency, and achieve better business outcomes. It’s been a pleasure having them as a trusted partner, and we look forward to growing together.",
+    name: "JT",
+    role: "Managing Director",
   },
   {
-    quote: "[Client testimonial — add a short quote from an SWS Global client here.]",
-    name: "[Client name]",
-    role: "[Job title, Company]",
+    quote:
+      "Working with SWS Global has been a great experience. Their team is professional, responsive, and highly reliable. They quickly understood our requirements and consistently delivered quality support, helping us improve efficiency and focus on our core business. We truly value SWS Global as a trusted partner.",
+    name: "CB",
+    role: "Operations Manager",
   },
 ] as const;
 
