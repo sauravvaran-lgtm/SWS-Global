@@ -11,8 +11,9 @@
 export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
+  { label: "Expertise", href: "#expertise" },
   { label: "Why Us", href: "#why-us" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "Success Stories", href: "#testimonials" },
 ] as const;
 
 export const hero = {
@@ -133,7 +134,7 @@ export const services = [
 /** TODO: replace with real quotes from SWS Global clients (with their permission). */
 export const testimonialsIntro = {
   eyebrow: "What clients say",
-  title: "Client Testimonials",
+  title: "Success Stories",
   description: "Hear from the businesses we support.",
   image: {
     src: "/images/testimonials/client-partnership.jpg",
@@ -158,6 +159,51 @@ export const testimonials = [
     role: "[Job title, Company]",
   },
 ] as const;
+
+export const expertise = {
+  eyebrow: "Sectors we recruit for",
+  title: "Our Expertise",
+  description:
+    "Specialist recruiters who understand the roles, the language and the compliance needs of each sector.",
+  items: [
+    {
+      id: "recruitment",
+      title: "Recruitment",
+      description:
+        "Offshore support for staffing agencies and in-house talent teams — sourcing, screening and the admin in between.",
+    },
+    {
+      id: "it",
+      title: "IT",
+      description:
+        "Developers, engineers, analysts and support specialists across modern tech stacks.",
+    },
+    {
+      id: "engineering",
+      title: "Engineering",
+      description:
+        "Civil, mechanical, electrical and project engineering roles, from technicians to team leads.",
+    },
+    {
+      id: "finance-and-legal",
+      title: "Finance and Legal",
+      description:
+        "Accounting, finance, compliance and legal professionals for roles that demand precision and discretion.",
+    },
+    {
+      id: "education",
+      title: "Education",
+      description:
+        "Teachers, support staff and education professionals for schools, colleges and training providers.",
+    },
+    {
+      id: "healthcare",
+      title: "Healthcare",
+      description:
+        "Nurses, allied health and care professionals, with credentials checked and kept up to date.",
+    },
+  ],
+} as const;
 
 export const whyPartner = {
   eyebrow: "Why SWS Global",

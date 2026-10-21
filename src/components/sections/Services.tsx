@@ -38,7 +38,7 @@ export function Services() {
             <StaggerItem as="li" key={service.id} className="h-full">
               <article
                 id={service.id}
-                className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-[0_2px_20px_-12px_rgb(6_26_58/0.25)] ring-1 ring-ink/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-25px_rgb(10_44_92/0.45)] hover:ring-accent-400"
+                className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-[0_2px_20px_-12px_rgb(18_31_49/0.25)] ring-1 ring-ink/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-25px_rgb(26_45_70/0.45)] hover:ring-accent-400"
               >
                 <div className="relative aspect-[10/8] overflow-hidden">
                   <Image

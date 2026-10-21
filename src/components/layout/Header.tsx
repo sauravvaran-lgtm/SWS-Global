@@ -60,7 +60,7 @@ export function Header() {
           solid
             ? menuOpen
               ? "border-b border-white/10 bg-brand-950"
-              : "border-b border-ink/5 bg-white/95 shadow-[0_8px_30px_-18px_rgb(6_26_58/0.35)] backdrop-blur-xl"
+              : "border-b border-ink/5 bg-white/95 shadow-[0_8px_30px_-18px_rgb(18_31_49/0.35)] backdrop-blur-xl"
             : "border-b border-transparent bg-transparent"
         }`}
       >

@@ -24,7 +24,7 @@ export function About() {
           </div>
 
           <Reveal delay={0.25}>
-            <figure className="group relative mt-9 overflow-hidden rounded-2xl border border-brand-100 bg-gradient-to-br from-brand-50 to-white p-6 transition-shadow duration-500 hover:shadow-[0_20px_50px_-25px_rgb(15_91_184/0.5)] sm:p-7">
+            <figure className="group relative mt-9 overflow-hidden rounded-2xl border border-brand-100 bg-gradient-to-br from-brand-50 to-white p-6 transition-shadow duration-500 hover:shadow-[0_20px_50px_-25px_rgb(47_87_136/0.5)] sm:p-7">
               <span className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-accent-500 to-brand-600 transition-all duration-500 group-hover:w-1.5" />
               <Quote aria-hidden className="absolute -right-2 -top-2 size-24 rotate-180 text-brand-100 transition-transform duration-700 group-hover:rotate-[170deg] group-hover:scale-110" />
               <blockquote className="relative font-display text-2xl font-semibold leading-snug text-ink sm:text-[1.7rem]">
@@ -54,7 +54,7 @@ export function About() {
             />
           </ParallaxMedia>
 
-          <div className="absolute -bottom-6 -left-2 z-10 animate-float rounded-2xl bg-white p-4 shadow-[0_24px_60px_-20px_rgb(6_26_58/0.45)] sm:-left-8 sm:p-5">
+          <div className="absolute -bottom-6 -left-2 z-10 animate-float rounded-2xl bg-white p-4 shadow-[0_24px_60px_-20px_rgb(18_31_49/0.45)] sm:-left-8 sm:p-5">
             <div className="flex items-center gap-3.5">
               <span className="grid size-11 place-items-center rounded-xl bg-accent-500 text-ink">
                 <Globe2 aria-hidden className="size-5" />
@@ -66,7 +66,7 @@ export function About() {
             </div>
           </div>
 
-          <div className="absolute -right-2 -top-6 z-10 animate-float-delayed rounded-2xl bg-ink p-4 text-white shadow-[0_24px_60px_-20px_rgb(6_26_58/0.6)] sm:-right-6 sm:p-5">
+          <div className="absolute -right-2 -top-6 z-10 animate-float-delayed rounded-2xl bg-ink p-4 text-white shadow-[0_24px_60px_-20px_rgb(18_31_49/0.6)] sm:-right-6 sm:p-5">
             <div className="flex items-center gap-3.5">
               <p className="font-display text-4xl font-bold leading-none text-accent-500">{services.length}</p>
               <p className="text-xs font-medium leading-snug text-white/75">

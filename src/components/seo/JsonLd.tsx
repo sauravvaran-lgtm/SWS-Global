@@ -1,4 +1,4 @@
-import { services } from "@/lib/content";
+import { expertise, services } from "@/lib/content";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 /**
@@ -32,7 +32,12 @@ export function JsonLd() {
       caption: siteConfig.name,
     },
     image: { "@id": logoId },
-    knowsAbout: ["Offshore recruitment", "Recruitment process outsourcing", ...services.map((s) => s.title)],
+    knowsAbout: [
+      "Offshore recruitment",
+      "Recruitment process outsourcing",
+      ...services.map((s) => s.title),
+      ...expertise.items.map((e) => `${e.title} recruitment`),
+    ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Offshore Recruitment Services",

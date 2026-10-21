@@ -30,7 +30,7 @@ export function WhyPartner() {
               const Icon = icons[i];
               return (
                 <StaggerItem as="li" key={point} distance={20}>
-                  <div className="group relative flex h-full items-center gap-4 overflow-hidden rounded-2xl bg-mist p-4 ring-1 ring-ink/5 transition-all duration-400 hover:-translate-y-1 hover:bg-white hover:shadow-[0_18px_40px_-22px_rgb(10_44_92/0.5)] hover:ring-accent-400">
+                  <div className="group relative flex h-full items-center gap-4 overflow-hidden rounded-2xl bg-mist p-4 ring-1 ring-ink/5 transition-all duration-400 hover:-translate-y-1 hover:bg-white hover:shadow-[0_18px_40px_-22px_rgb(26_45_70/0.5)] hover:ring-accent-400">
                     <span className="absolute inset-y-0 left-0 w-1 origin-bottom scale-y-0 bg-accent-500 transition-transform duration-400 group-hover:scale-y-100" />
                     <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-brand-900 text-accent-500 transition-all duration-400 group-hover:scale-105 group-hover:bg-accent-500 group-hover:text-ink">
                       <Icon aria-hidden className="size-5" />
@@ -63,7 +63,7 @@ export function WhyPartner() {
                 />
               </div>
             </div>
-            <div className="absolute -bottom-6 left-6 z-10 animate-float rounded-2xl bg-white p-4 shadow-[0_24px_60px_-20px_rgb(6_26_58/0.45)] sm:left-10">
+            <div className="absolute -bottom-6 left-6 z-10 animate-float rounded-2xl bg-white p-4 shadow-[0_24px_60px_-20px_rgb(18_31_49/0.45)] sm:left-10">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-600">{whyPartner.imageCard.label}</p>
               <p className="mt-0.5 font-display text-base font-bold text-ink">{whyPartner.imageCard.value}</p>
             </div>

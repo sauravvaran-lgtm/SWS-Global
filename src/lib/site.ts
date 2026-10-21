@@ -38,16 +38,19 @@ export const siteConfig = {
   ],
   locale: "en_US",
 
-  // TODO: add SWS Global's real contact details.
+  // Contact details. TODO: add the email address once it is set up.
   email: "", // e.g. "info@swsglobal.co.in"
-  phones: [] as { label: string; display: string; href: string }[], // e.g. { label: "India", display: "+91 …", href: "tel:+91…" }
+  phones: [
+    { label: "UK", display: "+44 7717 184991", href: "tel:+447717184991" },
+    { label: "UK", display: "+44 7737 170565", href: "tel:+447737170565" },
+  ] as { label: string; display: string; href: string }[],
   address: {
-    lines: [] as string[], // e.g. ["Street", "City, State PIN", "India"]
-    street: "",
-    locality: "",
-    region: "",
-    postalCode: "",
-    country: "",
+    lines: ["18, New Park Close,", "Shrewsbury, Shropshire,", "England, SY1 2SQ"],
+    street: "18, New Park Close",
+    locality: "Shrewsbury",
+    region: "Shropshire",
+    postalCode: "SY1 2SQ",
+    country: "GB",
   },
 
   // TODO: add SWS Global's social profile URLs. Empty ones are hidden.

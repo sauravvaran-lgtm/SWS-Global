@@ -1,36 +1,36 @@
 @import "tailwindcss";
 
 /*
- * Colour palette — taken from the SWS Global logo:
- * brand = the globe's royal blue / navy, accent = the "SWS" orange.
+ * Colour palette — matte versions of the SWS Global logo colours:
+ * brand = matte blue / navy, accent = matte (burnt) orange.
  */
 @theme {
-  --color-brand-50: #eef5ff;
-  --color-brand-100: #d9e8ff;
-  --color-brand-200: #b6d4fc;
-  --color-brand-300: #7fb3f5;
-  --color-brand-400: #3d8ff0;
-  --color-brand-500: #1a6fd6;
-  --color-brand-600: #0f5bb8;
-  --color-brand-700: #0d4a96;
-  --color-brand-800: #0b3b78;
-  --color-brand-900: #0a2c5c;
-  --color-brand-950: #061a3a;
+  --color-brand-50: #f1f5fa;
+  --color-brand-100: #e0e8f3;
+  --color-brand-200: #bdcfe6;
+  --color-brand-300: #8daad2;
+  --color-brand-400: #5c86bb;
+  --color-brand-500: #3b6aa0;
+  --color-brand-600: #2f5788;
+  --color-brand-700: #27476f;
+  --color-brand-800: #213a5a;
+  --color-brand-900: #1a2d46;
+  --color-brand-950: #121f31;
 
-  --color-accent-50: #fff4ea;
-  --color-accent-100: #ffe3c9;
-  --color-accent-300: #ffb35c;
-  --color-accent-400: #ff9a2e;
-  --color-accent-500: #ff7a1a;
-  --color-accent-600: #f25a0c;
-  --color-accent-700: #c94408;
+  --color-accent-50: #fdf3ec;
+  --color-accent-100: #f9e1d0;
+  --color-accent-300: #efa877;
+  --color-accent-400: #e88f55;
+  --color-accent-500: #e0773d;
+  --color-accent-600: #c7622c;
+  --color-accent-700: #a14e24;
 
   --color-ink: #161616;
   --color-charcoal: #333333;
   --color-slate-ink: #262c2c;
   --color-muted: #5e5e5e;
   --color-subtle: #a4a4a4;
-  --color-mist: #f4f7fb;
+  --color-mist: #f3f5f8;
 
   --color-signal: #e01616;
   --color-signal-soft: #ff4d4d;
@@ -182,12 +182,13 @@ section[id] {
     }
   }
 
+  /* Highlight text in the accent orange (kept flat for the matte look) */
   .text-gradient {
     background-image: linear-gradient(
       100deg,
-      #ffb03a 0%,
-      var(--color-accent-500) 45%,
-      #ff4d0f 100%
+      var(--color-accent-400) 0%,
+      var(--color-accent-500) 55%,
+      var(--color-accent-600) 100%
     );
     -webkit-background-clip: text;
     background-clip: text;
@@ -208,13 +209,13 @@ section[id] {
 
   .bg-grid {
     background-image:
-      linear-gradient(to right, rgb(61 143 240 / 0.09) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(61 143 240 / 0.09) 1px, transparent 1px);
+      linear-gradient(to right, rgb(92 134 187 / 0.09) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(92 134 187 / 0.09) 1px, transparent 1px);
     background-size: 56px 56px;
   }
 
   .bg-dots {
-    background-image: radial-gradient(rgb(15 91 184 / 0.18) 1px, transparent 1px);
+    background-image: radial-gradient(rgb(47 87 136 / 0.18) 1px, transparent 1px);
     background-size: 22px 22px;
   }
 
@@ -303,7 +304,7 @@ section[id] {
   .field:focus {
     outline: none;
     border-color: var(--color-brand-500);
-    box-shadow: 0 0 0 4px rgb(26 111 214 / 0.18);
+    box-shadow: 0 0 0 4px rgb(59 106 160 / 0.18);
   }
 
   .field[aria-invalid="true"] {

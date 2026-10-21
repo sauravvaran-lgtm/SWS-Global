@@ -24,7 +24,7 @@ export function renderOgImage() {
           justifyContent: "space-between",
           padding: "64px 72px",
           color: "#ffffff",
-          background: "linear-gradient(135deg, #061a3a 0%, #0a2c5c 55%, #0b3b78 100%)",
+          background: "linear-gradient(135deg, #121f31 0%, #1a2d46 55%, #213a5a 100%)",
           position: "relative",
         }}
       >
@@ -36,7 +36,7 @@ export function renderOgImage() {
             width: 560,
             height: 560,
             borderRadius: 9999,
-            background: "radial-gradient(circle, rgba(255,122,26,0.45) 0%, rgba(255,122,26,0) 70%)",
+            background: "radial-gradient(circle, rgba(224,119,61,0.45) 0%, rgba(224,119,61,0) 70%)",
           }}
         />
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
@@ -55,7 +55,7 @@ export function renderOgImage() {
               fontSize: 22,
               letterSpacing: 3,
               textTransform: "uppercase",
-              color: "#b6d4fc",
+              color: "#bdcfe6",
             }}
           >
             {hero.eyebrow}
@@ -63,7 +63,7 @@ export function renderOgImage() {
         </div>
 
         <div style={{ display: "flex", flexWrap: "wrap", fontSize: 56, fontWeight: 700, lineHeight: 1.15, maxWidth: 1060 }}>
-          {hero.titleLead}&nbsp;<span style={{ color: "#ff7a1a" }}>{hero.titleAccent}</span>
+          {hero.titleLead}&nbsp;<span style={{ color: "#e0773d" }}>{hero.titleAccent}</span>
         </div>
 
         <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>

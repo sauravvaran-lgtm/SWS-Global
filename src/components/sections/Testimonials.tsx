@@ -47,7 +47,7 @@ function QuoteCarousel() {
       <Quote aria-hidden className="absolute -right-6 -top-6 size-40 text-white/[0.04] sm:size-52" />
 
       <div className="relative flex items-center justify-between gap-4">
-        <span className="grid size-14 place-items-center rounded-2xl bg-accent-500 text-ink shadow-[0_18px_40px_-14px_rgb(255_122_26/0.7)]">
+        <span className="grid size-14 place-items-center rounded-2xl bg-accent-500 text-ink shadow-[0_18px_40px_-14px_rgb(224_119_61/0.4)]">
           <Quote aria-hidden className="size-6 fill-current" />
         </span>
         <p className="font-display text-sm font-semibold tabular-nums text-white/50" aria-hidden>

@@ -3,8 +3,8 @@
 A single-page marketing site for **SWS Global** (offshore recruitment services), built with
 Next.js 16 (App Router), React 19, Tailwind CSS 4 and Motion for animations.
 
-Colour palette (from the logo): brand blue/navy `#1A6FD6` → `#061A3A` and the "SWS" orange
-`#FF7A1A` (see the `--color-brand-*` and `--color-accent-*` tokens in `src/app/globals.css`).
+Colour palette (matte versions of the logo colours): brand blue/navy `#3B6AA0` → `#121F31` and the
+matte orange accent `#E0773D` (see the `--color-brand-*` and `--color-accent-*` tokens in `src/app/globals.css`).
 
 ## Getting started
 
@@ -29,7 +29,7 @@ Text in **[square brackets]** on the page is a placeholder for SWS Global's own 
 | What | Where to edit |
 | --- | --- |
 | Client testimonials | `testimonials` in `src/lib/content.ts` (use real quotes, with permission) |
-| Office address, phone numbers, email | `src/lib/site.ts` |
+| Email address (address and phone numbers are already set) | `src/lib/site.ts` |
 | Social media links, X/Twitter handle | `src/lib/site.ts` (empty links are hidden) |
 
 Please also review the rest of the copy in `src/lib/content.ts` (hero, about, services,
@@ -49,7 +49,7 @@ src/
     globals.css           Colour tokens, animations and shared styles
   components/
     layout/               Header (sticky, mobile menu), Footer, scroll progress, back-to-top
-    sections/             Hero, About, Stats, Services, WhyPartner, Testimonials,
+    sections/             Hero, About, Stats, Services, Expertise, WhyPartner, Testimonials,
                           Contact (+ ContactForm)
     seo/JsonLd.tsx        schema.org structured data (Organization / EmploymentAgency, WebSite, WebPage)
     ui/                   Logo, reveal animations, buttons, counters…
