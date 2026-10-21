@@ -32,7 +32,7 @@ export function Hero() {
       className="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-brand-950 text-white"
     >
       {/* Background layers */}
-      <div className="container-x relative flex flex-1 items-center pb-32 pt-[calc(var(--header-height)+2.5rem)] sm:pb-36 lg:pb-40">
+      <div className="container-x relative flex flex-1 items-center pb-32 pt-[calc(var(--header-height)+4.5rem)] sm:pb-36 lg:pb-40">
         <div className="grid w-full items-center gap-14 lg:grid-cols-[1.4fr_1fr] lg:gap-12 xl:gap-16">
           <motion.div style={parallax ? { y: contentY, opacity: fade } : undefined}>
             <p

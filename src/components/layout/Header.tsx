@@ -67,11 +67,17 @@ export function Header() {
         <div className="container-x flex h-[var(--header-height)] items-center justify-between gap-6">
           <a
             href="#home"
-            className="group shrink-0 transition-transform duration-300 hover:scale-[1.03]"
+            className="relative shrink-0 self-start pt-1.5 transition-transform duration-300 hover:scale-[1.03]"
             aria-label="SWS Global — back to top"
             onClick={() => setMenuOpen(false)}
           >
-            <Logo variant={lightText || menuOpen ? "light" : "dark"} eager className="text-[1rem] sm:text-[1.15rem]" />
+            <Logo
+              eager
+              sizes="(min-width: 1024px) 90px, 70px"
+              className={`w-auto shadow-[0_14px_30px_-14px_rgb(0_0_0/0.6)] transition-[height] duration-500 ease-out ${
+                solid ? "h-16" : "h-[84px] sm:h-24 lg:h-28"
+              }`}
+            />
           </a>
 
           <nav aria-label="Primary" className="hidden lg:block">
