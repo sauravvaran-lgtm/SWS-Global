@@ -32,21 +32,47 @@ export const hero = {
 };
 
 export const about = {
-  eyebrow: "Who we are",
-  title: "A recruitment partner that grows with you",
-  paragraphs: [
-    "SWS Global is an offshore recruitment and staffing support partner for businesses that need to hire well, hire fast and keep costs under control.",
-    "Our recruiters work as an extension of your in-house team — sourcing and screening candidates, keeping your database up to date and taking care of the admin that slows hiring down.",
-    "Whether you need help with one stage of the process or the full recruitment cycle, we shape the engagement around your goals, your tools and your time zone.",
-  ],
-  quoteLead: "Great hiring starts with",
-  quoteAccent: "the right partner.",
-  cta: { label: "Get in touch", href: "#contact" },
-  image: {
-    src: "/images/about/recruitment-conversation.jpg",
-    alt: "Recruiter in conversation with a candidate at a round table",
+  eyebrow: "About us",
+  title: "Meet Our Leadership Team",
+  intro: {
+    before: "With ",
+    highlight: "15+ years of combined experience",
+    after:
+      ", our leadership team brings together industry expertise, strategic vision, and a commitment to delivering reliable, scalable outsourcing solutions. We help healthcare recruitment businesses and other organisations grow through dedicated Indian talent, operational support, and efficient back-office solutions.",
   },
-};
+  executives: [
+    {
+      name: "Shawn Vance",
+      role: "Chief Executive Officer (CEO)",
+      bio: "Provides overall business leadership and strategic direction, driving the company’s vision, long-term growth, and commitment to delivering value to clients.",
+      quote: "Great businesses are built on a clear vision, strong relationships, and a commitment to creating lasting value.",
+    },
+    {
+      name: "Kevin May",
+      role: "Chief Operating Officer (COO)",
+      bio: "Focuses on operational excellence, process efficiency, and service delivery, ensuring our teams provide consistent, reliable, and scalable outsourcing solutions.",
+      quote: "Operational excellence is about turning the right processes into consistent results and reliable service.",
+    },
+    {
+      name: "Vik Shah",
+      role: "Chief Strategy Officer (CSO)",
+      bio: "Brings extensive industry experience and strategic insight to the business. Leads strategic planning, identifies growth opportunities, and develops solutions that strengthen client partnerships and long-term business success.",
+      quote: "Experience shapes strategy, but the ability to think ahead and adapt is what drives sustainable success.",
+    },
+  ],
+  growthTeam: [
+    {
+      name: "Nisha Vaja",
+      role: "Business Growth Manager, UK Division",
+      bio: "Drives business development across the UK market, building client relationships and identifying opportunities to support healthcare recruitment firms with sourcing, compliance, administration, and operational support.",
+    },
+    {
+      name: "Zain Awadiya",
+      role: "Business Growth Manager, US & Middle East",
+      bio: "Leads business development across the US and Middle East, exploring new partnerships and delivering tailored outsourcing solutions that help businesses scale efficiently.",
+    },
+  ],
+} as const;
 
 /** Key figures shown in the stats band (set `value: null` to show an "XX" placeholder). */
 export const stats: { value: number | null; suffix: string; label: string }[] = [

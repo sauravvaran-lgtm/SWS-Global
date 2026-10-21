@@ -1,4 +1,4 @@
-import { expertise, services } from "@/lib/content";
+import { about, expertise, services } from "@/lib/content";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 /**
@@ -32,6 +32,12 @@ export function JsonLd() {
       caption: siteConfig.name,
     },
     image: { "@id": logoId },
+    employee: [...about.executives, ...about.growthTeam].map((p) => ({
+      "@type": "Person",
+      name: p.name,
+      jobTitle: p.role,
+      worksFor: { "@id": orgId },
+    })),
     knowsAbout: [
       "Offshore recruitment",
       "Recruitment process outsourcing",

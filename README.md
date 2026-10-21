@@ -31,7 +31,7 @@ Text in **[square brackets]** on the page is a placeholder for SWS Global's own 
 | Email address (address and phone numbers are already set) | `src/lib/site.ts` |
 | Social media links, X/Twitter handle | `src/lib/site.ts` (empty links are hidden) |
 
-Please also review the rest of the copy in `src/lib/content.ts` (hero, about, services,
+Please also review the rest of the copy in `src/lib/content.ts` (hero, services,
 "Why partner with us") to make sure every statement matches how SWS Global works.
 
 ## Project structure
@@ -104,7 +104,6 @@ All photos are from [Unsplash](https://unsplash.com) and free to use under the
 | Image | Photographer |
 | --- | --- |
 | `hero/hand-network.jpg` (people icons drawn in code) | Ratapan Anantawat |
-| `about/recruitment-conversation.jpg` | Christina @ wocintechchat.com |
 | `services/database-management.jpg` | Luke Chesser |
 | `services/market-mapping.jpg` | ThisisEngineering |
 | `services/lead-generation.jpg` | BaljkanN4 |
