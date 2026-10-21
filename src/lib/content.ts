@@ -11,6 +11,7 @@ export const navLinks = [
   { label: "Expertise", href: "#expertise" },
   { label: "Why Us", href: "#why-us" },
   { label: "Success Stories", href: "#testimonials" },
+  { label: "Careers", href: "#careers" },
 ] as const;
 
 export const hero = {
@@ -223,6 +224,21 @@ export const whyPartner = {
     alt: "Three colleagues laughing together while working at a table",
   },
   imageCard: { label: "Your team, extended", value: "Recruiters who work your way" },
+} as const;
+
+export const careers = {
+  eyebrow: "Careers",
+  title: "Open Vacancies",
+  description:
+    "Join a growing team supporting clients across UK healthcare, education and technology. Apply below and we'll be in touch about next steps.",
+  vacancies: [
+    { id: "payroll-administrator", title: "Payroll Administrator", sector: "UK Healthcare", openings: 2 },
+    { id: "compliance-officer", title: "Compliance Officer", sector: "UK Healthcare", openings: 1 },
+    { id: "booking-consultant", title: "Booking Consultant", sector: "UK Healthcare", openings: 1 },
+    { id: "gp-ahp-360-recruitment-consultant", title: "GP/AHP 360 Recruitment Consultant", sector: "UK Healthcare", openings: 1 },
+    { id: "education-360-recruitment-consultant", title: "Education 360 Recruitment Consultant", sector: "UK Education", openings: 2 },
+    { id: "it-developer", title: "IT Developer", sector: "IT", openings: 2 },
+  ],
 } as const;
 
 export const contact = {

@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "motion/react";
 import { AlertCircle, ArrowRight, ChevronDown, Loader2, RotateCcw } from "lucide-react";
-import { useId, useRef, useState, type ChangeEvent, type FormEvent, type ReactNode } from "react";
+import { useEffect, useId, useRef, useState, type ChangeEvent, type FormEvent, type ReactNode } from "react";
 import {
   emptyContactForm,
   submitContactForm,
@@ -13,6 +13,7 @@ import {
 import { contact } from "@/lib/content";
 import { countries, popularCountries } from "@/lib/countries";
 import { siteConfig } from "@/lib/site";
+import { APPLY_EVENT } from "@/components/ui/ApplyButton";
 
 type Status = "idle" | "submitting" | "success" | "error";
 type FieldName = keyof ContactFormData;
@@ -70,6 +71,21 @@ export function ContactForm() {
   const cardRef = useRef<HTMLDivElement>(null);
   // Keep the card height steady when the form is swapped for the thank-you message.
   const [lockedHeight, setLockedHeight] = useState<number>();
+
+  // "Apply now" on a vacancy card pre-fills the inquiry with the chosen role.
+  useEffect(() => {
+    const onApply = (e: Event) => {
+      const role = (e as CustomEvent<string>).detail;
+      setLockedHeight(undefined);
+      setStatus("idle");
+      setData((d) => ({ ...d, inquiry: `I'd like to apply for the ${role} role.\n\n` }));
+      window.setTimeout(() => {
+        formRef.current?.querySelector<HTMLInputElement>('[name="firstName"]')?.focus({ preventScroll: true });
+      }, 450);
+    };
+    window.addEventListener(APPLY_EVENT, onApply);
+    return () => window.removeEventListener(APPLY_EVENT, onApply);
+  }, []);
 
   const id = (name: FieldName) => `${uid}-${name}`;
   const showError = (name: FieldName) => (submitted || touched[name] ? errors[name] : undefined);

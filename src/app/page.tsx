@@ -8,6 +8,7 @@ import { Stats } from "@/components/sections/Stats";
 import { Services } from "@/components/sections/Services";
 import { Expertise } from "@/components/sections/Expertise";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { Careers } from "@/components/sections/Careers";
 import { WhyPartner } from "@/components/sections/WhyPartner";
 import { Contact } from "@/components/sections/Contact";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -26,6 +27,7 @@ export default function Home() {
         <Expertise />
         <WhyPartner />
         <Testimonials />
+        <Careers />
         <Contact />
       </main>
       <Footer />
