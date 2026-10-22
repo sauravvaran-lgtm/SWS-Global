@@ -1,20 +1,22 @@
 import Image from "next/image";
 import {
-  Clock4,
+  Award,
   BarChart3,
+  Clock4,
   GraduationCap,
   Maximize2,
   ShieldCheck,
-  SlidersHorizontal,
-  UserCheck,
+  TrendingUp,
   UserRoundCog,
+  Workflow,
 } from "lucide-react";
 import { whyPartner } from "@/lib/content";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
-const icons = [GraduationCap, UserRoundCog, UserCheck, Clock4, ShieldCheck, SlidersHorizontal, Maximize2, BarChart3];
+// One icon per point, in the same order as whyPartner.points
+const icons = [GraduationCap, Award, Maximize2, TrendingUp, Clock4, UserRoundCog, ShieldCheck, Workflow, BarChart3];
 
 export function WhyPartner() {
   return (
@@ -27,7 +29,7 @@ export function WhyPartner() {
             {whyPartner.points.map((point, i) => {
               const Icon = icons[i];
               return (
-                <StaggerItem as="li" key={point} distance={20}>
+                <StaggerItem as="li" key={point} distance={20} className="sm:[&:last-child:nth-child(odd)]:col-span-2">
                   <div className="group relative flex h-full items-center gap-4 overflow-hidden rounded-2xl bg-mist p-4 ring-1 ring-ink/5 transition-all duration-400 hover:-translate-y-1 hover:bg-white hover:shadow-[0_18px_40px_-22px_rgb(26_45_70/0.5)] hover:ring-accent-400">
                     <span className="absolute inset-y-0 left-0 w-1 origin-bottom scale-y-0 bg-accent-500 transition-transform duration-400 group-hover:scale-y-100" />
                     <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-brand-900 text-accent-500 transition-all duration-400 group-hover:scale-105 group-hover:bg-accent-500 group-hover:text-ink">
