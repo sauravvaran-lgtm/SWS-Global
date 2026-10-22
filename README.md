@@ -48,7 +48,7 @@ src/
     globals.css           Colour tokens, animations and shared styles
   components/
     layout/               Header (sticky, mobile menu), Footer, scroll progress, back-to-top
-    sections/             Hero, About, Approach, Stats, Services, Expertise, WhyPartner, Testimonials, Careers,
+    sections/             Hero, Approach, Stats, Services, Expertise, WhyPartner, About, Testimonials, Careers,
                           Contact (+ ContactForm)
     seo/JsonLd.tsx        schema.org structured data (Organization / EmploymentAgency, WebSite, WebPage)
     ui/                   Logo, reveal animations, buttons, counters…

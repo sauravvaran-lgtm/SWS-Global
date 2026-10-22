@@ -6,10 +6,10 @@
  */
 
 export const navLinks = [
-  { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Expertise", href: "#expertise" },
   { label: "Why Us", href: "#why-us" },
+  { label: "About", href: "#about" },
   { label: "Success Stories", href: "#testimonials" },
   { label: "Careers", href: "#careers" },
 ] as const;
@@ -79,15 +79,19 @@ export const approach = {
   title: "Our Approach",
   description:
     "We combine strategic thinking, proactive business development, and structured execution to help clients grow without unnecessary overheads. From healthcare recruitment support to data entry, chat support, and back-office operations, we provide flexible manpower solutions designed around each client's needs.",
-  highlights: [
-    { id: "experience", title: "20+ Years", text: "Experience in Growing Offshore Solutions" },
-    { id: "delivery", title: "Global Delivery", text: "UK, US, Europe, Australia & Globally" },
-    { id: "specialists", title: "Industry Specialists", text: "Healthcare, Education, IT, Compliance, Accounting, Back Office" },
-    { id: "bot", title: "BOT Model", text: "Build. Operate. Transfer." },
-    { id: "operations", title: "24×7 Operations", text: "Round-the-clock support & delivery" },
-    { id: "scalable", title: "Scalable & Flexible", text: "Scale dynamically as per business need" },
-    { id: "track-record", title: "Proven Track Record", text: "Of Growing Businesses Successfully" },
-  ],
+  framework: {
+    label: "The SWS Global Framework",
+    title: "The B.O.S.S. Model",
+    tagline: ["Build.", "Optimise.", "Scale.", "Succeed."],
+    description:
+      "A structured approach to establishing, managing and scaling high-performance offshore teams.",
+    steps: [
+      { letter: "B", title: "Build", text: "Establish the right people, processes and infrastructure." },
+      { letter: "O", title: "Optimise", text: "Improve performance, quality and efficiency." },
+      { letter: "S", title: "Scale", text: "Expand capabilities in line with business demand." },
+      { letter: "S", title: "Succeed", text: "Deliver measurable outcomes and sustainable growth." },
+    ],
+  },
 } as const;
 
 /** Key figures shown in the stats band (set `value: null` to show an "XX" placeholder). */
