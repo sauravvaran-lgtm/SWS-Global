@@ -6,9 +6,9 @@
  */
 
 export const navLinks = [
+  { label: "Why Us", href: "#why-us" },
   { label: "Expertise", href: "#expertise" },
   { label: "Services", href: "#services" },
-  { label: "Why Us", href: "#why-us" },
   { label: "About", href: "#about" },
   { label: "Success Stories", href: "#testimonials" },
   { label: "Careers", href: "#careers" },

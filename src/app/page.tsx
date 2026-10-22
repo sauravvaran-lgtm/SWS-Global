@@ -22,11 +22,11 @@ export default function Home() {
       <Header />
       <main id="main">
         <Hero />
+        <WhyPartner />
         <Expertise />
         <Approach />
         <Stats />
         <Services />
-        <WhyPartner />
         <About />
         <Testimonials />
         <Careers />

@@ -17,7 +17,7 @@ export function Expertise() {
     <section
       id="expertise"
       aria-labelledby="expertise-title"
-      className="section-y relative overflow-hidden bg-brand-900 text-white"
+      className="section-y relative overflow-hidden bg-brand-950 text-white"
     >
       <div className="container-x relative">
         <SectionHeading
