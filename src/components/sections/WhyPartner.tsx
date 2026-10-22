@@ -18,7 +18,7 @@ const icons = [GraduationCap, UserRoundCog, UserCheck, Clock4, ShieldCheck, Slid
 
 export function WhyPartner() {
   return (
-    <section id="why-us" aria-labelledby="why-title" className="section-y relative overflow-hidden bg-mist">
+    <section id="why-us" aria-labelledby="why-title" className="section-y relative overflow-hidden bg-white">
       <div className="container-x relative grid items-center gap-14 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
         <div>
           <SectionHeading id="why-title" eyebrow={whyPartner.eyebrow} title={whyPartner.title} />
@@ -28,7 +28,7 @@ export function WhyPartner() {
               const Icon = icons[i];
               return (
                 <StaggerItem as="li" key={point} distance={20}>
-                  <div className="group relative flex h-full items-center gap-4 overflow-hidden rounded-2xl bg-white p-4 ring-1 ring-ink/5 transition-all duration-400 hover:-translate-y-1 hover:shadow-[0_18px_40px_-22px_rgb(26_45_70/0.5)] hover:ring-accent-400">
+                  <div className="group relative flex h-full items-center gap-4 overflow-hidden rounded-2xl bg-mist p-4 ring-1 ring-ink/5 transition-all duration-400 hover:-translate-y-1 hover:bg-white hover:shadow-[0_18px_40px_-22px_rgb(26_45_70/0.5)] hover:ring-accent-400">
                     <span className="absolute inset-y-0 left-0 w-1 origin-bottom scale-y-0 bg-accent-500 transition-transform duration-400 group-hover:scale-y-100" />
                     <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-brand-900 text-accent-500 transition-all duration-400 group-hover:scale-105 group-hover:bg-accent-500 group-hover:text-ink">
                       <Icon aria-hidden className="size-5" />

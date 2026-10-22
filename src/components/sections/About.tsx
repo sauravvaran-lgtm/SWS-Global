@@ -27,7 +27,7 @@ function Avatar({ name, size = "lg" }: { name: string; size?: "lg" | "md" }) {
 
 export function About() {
   return (
-    <section id="about" aria-labelledby="about-title" className="section-y relative overflow-hidden bg-white">
+    <section id="about" aria-labelledby="about-title" className="section-y relative overflow-hidden bg-mist">
       <div className="container-x relative">
         <SectionHeading
           id="about-title"
@@ -77,7 +77,7 @@ export function About() {
         <Stagger as="ul" className="mx-auto mt-6 grid max-w-5xl gap-6 md:grid-cols-2" stagger={0.1}>
           {about.growthTeam.map((person) => (
             <StaggerItem as="li" key={person.name} className="h-full">
-              <article className="group flex h-full gap-5 rounded-3xl bg-mist p-6 ring-1 ring-ink/5 transition-all duration-500 hover:-translate-y-1.5 hover:bg-white hover:shadow-[0_24px_50px_-25px_rgb(26_45_70/0.45)] hover:ring-accent-400 sm:p-7">
+              <article className="group flex h-full gap-5 rounded-3xl bg-white p-6 ring-1 ring-ink/5 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_50px_-25px_rgb(26_45_70/0.45)] hover:ring-accent-400 sm:p-7">
                 <Avatar name={person.name} size="md" />
                 <div>
                   <h4 className="font-display text-lg font-bold text-ink">{person.name}</h4>
