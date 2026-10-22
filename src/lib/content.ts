@@ -22,7 +22,7 @@ export const hero = {
   description:
     "SWS Global helps staffing firms and growing businesses source, screen and onboard great talent — with dedicated offshore recruiters who plug straight into your process.",
   primaryCta: { label: "Our Services", href: "#services" },
-  secondaryCta: { label: "Book a Consultation", href: "#contact" },
+  secondaryCta: { label: "Book Free Consultation", href: "#contact" },
   image: {
     src: "/images/hero/hand-network.jpg",
     alt: "Open hand holding a glowing network of people, with one candidate selected",
