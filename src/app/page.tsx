@@ -22,8 +22,8 @@ export default function Home() {
       <Header />
       <main id="main">
         <Hero />
-        <WhyPartner />
         <Expertise />
+        <WhyPartner />
         <Approach />
         <Stats />
         <Services />

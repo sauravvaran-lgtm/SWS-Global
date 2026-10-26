@@ -17,12 +17,11 @@ export function Expertise() {
     <section
       id="expertise"
       aria-labelledby="expertise-title"
-      className="section-y relative overflow-hidden bg-brand-950 text-white"
+      className="section-y relative overflow-hidden bg-white"
     >
       <div className="container-x relative">
         <SectionHeading
           id="expertise-title"
-          tone="dark"
           align="center"
           eyebrow={expertise.eyebrow}
           title={expertise.title}
@@ -34,19 +33,19 @@ export function Expertise() {
             const Icon = icons[item.id];
             return (
               <StaggerItem as="li" key={item.id} className="h-full">
-                <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-7 transition-all duration-500 hover:-translate-y-2 hover:border-accent-500/60 hover:bg-white/[0.07] sm:p-8">
+                <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-mist p-7 ring-1 ring-ink/5 transition-all duration-500 hover:-translate-y-2 hover:bg-white hover:shadow-[0_30px_60px_-25px_rgb(26_45_70/0.45)] hover:ring-accent-400 sm:p-8">
                   <span className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-accent-500 transition-transform duration-500 group-hover:scale-x-100" />
                   <span
                     aria-hidden
-                    className="absolute right-6 top-5 font-display text-5xl font-bold text-white/[0.06] transition-colors duration-500 group-hover:text-accent-500/20"
+                    className="absolute right-6 top-5 font-display text-5xl font-bold text-ink/[0.06] transition-colors duration-500 group-hover:text-accent-500/25"
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="grid size-14 place-items-center rounded-2xl bg-accent-500/15 text-accent-400 ring-1 ring-accent-500/30 transition-all duration-500 group-hover:-rotate-6 group-hover:scale-105 group-hover:bg-accent-500 group-hover:text-ink">
+                  <span className="grid size-14 place-items-center rounded-2xl bg-brand-900 text-accent-500 transition-all duration-500 group-hover:-rotate-6 group-hover:scale-105 group-hover:bg-accent-500 group-hover:text-ink">
                     <Icon aria-hidden className="size-6" />
                   </span>
-                  <h3 className="mt-6 font-display text-xl font-bold text-white">{item.title}</h3>
-                  <p className="mt-3 leading-relaxed text-white/70">{item.description}</p>
+                  <h3 className="mt-6 font-display text-xl font-bold text-ink transition-colors duration-300 group-hover:text-brand-700">{item.title}</h3>
+                  <p className="mt-3 leading-relaxed text-muted">{item.description}</p>
                 </article>
               </StaggerItem>
             );

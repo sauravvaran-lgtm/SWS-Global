@@ -6,8 +6,8 @@
  */
 
 export const navLinks = [
-  { label: "Why Us", href: "#why-us" },
   { label: "Expertise", href: "#expertise" },
+  { label: "Why Us", href: "#why-us" },
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
   { label: "Success Stories", href: "#testimonials" },
@@ -264,7 +264,6 @@ export const whyPartner = {
     "A single point of contact for your extended teams",
     "Secure and reliable data protection (GDPR level)",
     "Clear reporting structure",
-    "Clear, regular reporting",
   ],
   image: {
     src: "/images/why-us/team-at-work.jpg",
