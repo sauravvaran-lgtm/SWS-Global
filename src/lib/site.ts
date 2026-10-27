@@ -40,10 +40,10 @@ export const siteConfig = {
   // Contact details
   email: "Foundation@swsglobalgroup.com",
 
-  // Web3Forms access key for the contact form (free key from web3forms.com, emailed to the
-  // address that should receive inquiries). It is a public key, so it is safe in the browser.
-  // Set NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY in Vercel, or paste the key here.
-  web3formsAccessKey: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? "",
+  // Web3Forms access key for the contact form; inquiries go to the inbox the key was created
+  // for. It is a public key, so it is safe in the browser. NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
+  // in Vercel overrides it.
+  web3formsAccessKey: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "8308d24d-cc27-4219-acf3-683bb1e4c4e5",
   phones: [
     { label: "UK", display: "+44 7717 184991", href: "tel:+447717184991" },
     { label: "UK", display: "+44 7737 170565", href: "tel:+447737170565" },

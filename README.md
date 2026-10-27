@@ -74,14 +74,12 @@ public/
 The form sends each inquiry by email through [Web3Forms](https://web3forms.com) (free plan: 250 submissions a
 month). Career "Apply now" buttons use the same form.
 
-1. Go to web3forms.com, enter the inbox that should receive inquiries (Foundation@swsglobalgroup.com) and
-   copy the access key that is emailed to it.
-2. In Vercel: Project → Settings → Environment Variables, add `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` with that key,
-   then redeploy. (The key is public by design, so it can also be pasted into `src/lib/site.ts`.)
+The access key is set in `src/lib/site.ts` (`web3formsAccessKey`). To send inquiries to a different inbox,
+create a new key at web3forms.com for that address and replace it there, or set
+`NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` in Vercel (Project → Settings → Environment Variables) and redeploy.
 
 The email includes the visitor's name, email, phone, country, company and inquiry, and "Reply" goes straight
-to the visitor. Without a key the form shows an error message with the email address instead.
-The sending code is `submitContactForm()` in `src/lib/contact.ts`.
+to the visitor. The sending code is `submitContactForm()` in `src/lib/contact.ts`.
 
 ## SEO
 
