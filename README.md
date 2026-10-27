@@ -24,11 +24,10 @@ npm run start
 
 ## Before going live — placeholders to replace
 
-Text in **[square brackets]** on the page is a placeholder for SWS Global's own details:
+Still to add (empty values are hidden on the page):
 
 | What | Where to edit |
 | --- | --- |
-| Email address (address and phone numbers are already set) | `src/lib/site.ts` |
 | Social media links, X/Twitter handle | `src/lib/site.ts` (empty links are hidden) |
 
 Please also review the rest of the copy in `src/lib/content.ts` (hero, services,

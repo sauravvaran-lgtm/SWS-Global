@@ -151,7 +151,8 @@ export function Footer() {
       </div>
 
       <div className="relative border-t border-white/10">
-        <div className="container-x flex flex-col items-center justify-between gap-3 py-6 text-center text-xs text-white/50 sm:flex-row sm:text-left">
+        {/* Extra bottom/right padding keeps the text clear of the fixed back-to-top button */}
+        <div className="container-x flex flex-col items-center justify-between gap-3 pb-24 pt-6 text-center text-xs text-white/50 sm:flex-row sm:pb-6 sm:pr-20 sm:text-left min-[1400px]:pr-6">
           <p>Copyright © {year} SWS Global. All rights reserved.</p>
           <p>Offshore recruitment services</p>
         </div>

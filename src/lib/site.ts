@@ -4,9 +4,8 @@
  * Set NEXT_PUBLIC_SITE_URL in your environment to the live domain (no trailing
  * slash) so canonical URLs, the sitemap and social cards are correct.
  *
- * Contact details and social links are empty until SWS Global's real details
- * are added below. Empty values show a placeholder on the page and are left out
- * of the search-engine structured data.
+ * Social links are empty until SWS Global's profiles are added below. Empty
+ * values are hidden on the page and left out of the search-engine structured data.
  */
 export const siteConfig = {
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://swsglobal.co.in").replace(/\/$/, ""),
@@ -38,8 +37,8 @@ export const siteConfig = {
   ],
   locale: "en_US",
 
-  // Contact details. TODO: add the email address once it is set up.
-  email: "", // e.g. "info@swsglobal.co.in"
+  // Contact details
+  email: "Foundation@swsglobalgroup.com",
   phones: [
     { label: "UK", display: "+44 7717 184991", href: "tel:+447717184991" },
     { label: "UK", display: "+44 7737 170565", href: "tel:+447737170565" },
