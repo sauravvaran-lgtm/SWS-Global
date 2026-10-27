@@ -69,15 +69,19 @@ public/
 - Favicons, the social share image and the logo in the search-engine data still use the earlier
   blue-globe artwork (`swsglobal-logo-dark-2.png`, `logo-mark.png`, `wordmark-light.png`, `logo-full.png`).
 
-## Connecting the contact form
+## Contact form (Web3Forms)
 
-The form validates input and shows a thank-you message, but **does not send anything yet**.
-To connect your email service or API, edit `submitContactForm()` in `src/lib/contact.ts` —
-there is a commented example showing a `fetch` call. The function receives:
+The form sends each inquiry by email through [Web3Forms](https://web3forms.com) (free plan: 250 submissions a
+month). Career "Apply now" buttons use the same form.
 
-`firstName, lastName, email, phone, country, company, inquiry`
+1. Go to web3forms.com, enter the inbox that should receive inquiries (Foundation@swsglobalgroup.com) and
+   copy the access key that is emailed to it.
+2. In Vercel: Project → Settings → Environment Variables, add `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` with that key,
+   then redeploy. (The key is public by design, so it can also be pasted into `src/lib/site.ts`.)
 
-If it throws an error, the form shows an error message and keeps the visitor's input.
+The email includes the visitor's name, email, phone, country, company and inquiry, and "Reply" goes straight
+to the visitor. Without a key the form shows an error message with the email address instead.
+The sending code is `submitContactForm()` in `src/lib/contact.ts`.
 
 ## SEO
 

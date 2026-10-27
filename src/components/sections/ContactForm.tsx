@@ -118,17 +118,22 @@ export function ContactForm() {
       return;
     }
 
+    // Honeypot: people never see this field, so if it's filled in a bot sent the form.
+    const isBot = Boolean(formRef.current?.querySelector<HTMLInputElement>('[name="website"]')?.value);
+
     setStatus("submitting");
     try {
-      await submitContactForm({
-        ...data,
-        firstName: data.firstName.trim(),
-        lastName: data.lastName.trim(),
-        email: data.email.trim(),
-        phone: data.phone.trim(),
-        company: data.company.trim(),
-        inquiry: data.inquiry.trim(),
-      });
+      if (!isBot) {
+        await submitContactForm({
+          ...data,
+          firstName: data.firstName.trim(),
+          lastName: data.lastName.trim(),
+          email: data.email.trim(),
+          phone: data.phone.trim(),
+          company: data.company.trim(),
+          inquiry: data.inquiry.trim(),
+        });
+      }
       setSentName(data.firstName.trim());
       setLockedHeight(cardRef.current?.offsetHeight);
       setStatus("success");
@@ -136,7 +141,8 @@ export function ContactForm() {
       setErrors({});
       setTouched({});
       setSubmitted(false);
-    } catch {
+    } catch (err) {
+      console.error("Contact form:", err);
       setStatus("error");
     }
   };
@@ -310,6 +316,12 @@ export function ContactForm() {
                   {data.inquiry.length}/{INQUIRY_MAX}
                 </span>
               </Field>
+            </div>
+
+            <div aria-hidden className="absolute -left-[9999px] size-px overflow-hidden">
+              <label>
+                Website <input type="text" name="website" tabIndex={-1} autoComplete="off" />
+              </label>
             </div>
 
             <p className="sr-only" role="status" aria-live="polite">

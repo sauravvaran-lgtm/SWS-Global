@@ -1,3 +1,5 @@
+import { siteConfig } from "@/lib/site";
+
 export type ContactFormData = {
   firstName: string;
   lastName: string;
@@ -49,19 +51,36 @@ export function validateContactForm(data: ContactFormData): ContactFormErrors {
 }
 
 /**
- * Sends the contact form.
- *
- * Email delivery is not connected yet. To go live, replace the body of this
- * function with a call to your email service or API, for example:
- *
- *   const res = await fetch("/api/contact", {
- *     method: "POST",
- *     headers: { "Content-Type": "application/json" },
- *     body: JSON.stringify(data),
- *   });
- *   if (!res.ok) throw new Error("Failed to send message");
+ * Sends the contact form by email through Web3Forms (free plan: 250 submissions a month).
+ * Inquiries go to the inbox the access key was created for, and "Reply" goes to the visitor.
+ * Throws if the key is missing or the message could not be sent, so the form can show an error.
  */
 export async function submitContactForm(data: ContactFormData): Promise<void> {
-  void data;
-  await new Promise((resolve) => setTimeout(resolve, 1200));
+  if (!siteConfig.web3formsAccessKey) {
+    throw new Error("Contact form is not connected: set NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY.");
+  }
+
+  const name = `${data.firstName} ${data.lastName}`;
+  const res = await fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Accept: "application/json" },
+    body: JSON.stringify({
+      access_key: siteConfig.web3formsAccessKey,
+      subject: `New website inquiry from ${name} (${data.company})`,
+      from_name: `${siteConfig.name} Website`,
+      replyto: data.email,
+      Name: name,
+      Email: data.email,
+      Phone: data.phone,
+      Country: data.country,
+      Company: data.company,
+      Inquiry: data.inquiry,
+    }),
+    signal: AbortSignal.timeout(20000),
+  });
+
+  const result: { success?: boolean; message?: string } | null = await res.json().catch(() => null);
+  if (!res.ok || !result?.success) {
+    throw new Error(result?.message || `Failed to send message (HTTP ${res.status})`);
+  }
 }
