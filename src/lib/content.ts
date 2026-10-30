@@ -67,7 +67,7 @@ export const about = {
       bio: "Drives business development across the UK market, building client relationships and identifying opportunities to support healthcare recruitment firms with sourcing, compliance, administration, and operational support.",
     },
     {
-      name: "Zain Awadiya",
+      name: "Zain Anderson",
       role: "Business Growth Manager, US & Middle East",
       bio: "Leads business development across the US and Middle East, exploring new partnerships and delivering tailored outsourcing solutions that help businesses scale efficiently.",
     },

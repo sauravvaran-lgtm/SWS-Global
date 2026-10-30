@@ -22,7 +22,7 @@ const headingClass = "text-xs font-bold uppercase tracking-[0.2em] text-accent-5
 
 export function Footer() {
   const year = new Date().getFullYear();
-  const { address, phones, email } = siteConfig;
+  const { address, phones, email, extraEmails } = siteConfig;
 
   return (
     <footer className="relative overflow-hidden bg-brand-950 text-white" aria-labelledby="footer-heading">
@@ -133,26 +133,28 @@ export function Footer() {
                 <span className="text-white/40">[Phone number]</span>
               </li>
             )}
-            <li>
-              {email ? (
-                <a href={`mailto:${email}`} className="flex items-center gap-3 transition-colors hover:text-white">
-                  <Mail aria-hidden className="size-4 shrink-0 text-accent-500" />
-                  <span className="link-underline">{email}</span>
-                </a>
-              ) : (
-                <span className="flex items-center gap-3">
-                  <Mail aria-hidden className="size-4 shrink-0 text-accent-500" />
-                  <span className="text-white/40">[Email address]</span>
-                </span>
-              )}
-            </li>
+            {email ? (
+              [email, ...extraEmails].map((mail) => (
+                <li key={mail}>
+                  <a href={`mailto:${mail}`} className="flex items-center gap-3 transition-colors hover:text-white">
+                    <Mail aria-hidden className="size-4 shrink-0 text-accent-500" />
+                    <span className="link-underline">{mail}</span>
+                  </a>
+                </li>
+              ))
+            ) : (
+              <li className="flex items-center gap-3">
+                <Mail aria-hidden className="size-4 shrink-0 text-accent-500" />
+                <span className="text-white/40">[Email address]</span>
+              </li>
+            )}
           </ul>
         </div>
       </div>
 
       <div className="relative border-t border-white/10">
         {/* Extra bottom/right padding keeps the text clear of the fixed back-to-top button */}
-        <div className="container-x flex flex-col items-center justify-between gap-3 pb-24 pt-6 text-center text-xs text-white/50 sm:flex-row sm:pb-6 sm:pr-20 sm:text-left min-[1400px]:pr-6">
+        <div className="container-x flex flex-col items-center justify-between gap-3 pb-24 pt-6 text-center text-xs text-white/50 sm:flex-row sm:pb-6 sm:pr-20 sm:text-left min-[87.5rem]:pr-8">
           <p>Copyright © {year} SWS Global. All rights reserved.</p>
           <p>Offshore recruitment services</p>
         </div>

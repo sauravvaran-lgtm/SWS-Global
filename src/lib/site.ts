@@ -38,7 +38,8 @@ export const siteConfig = {
   locale: "en_US",
 
   // Contact details
-  email: "Foundation@swsglobalgroup.com",
+  email: "foundation@swsglobalgroup.com",
+  extraEmails: ["growth@swsglobalgroup.com"], // also listed in the footer
 
   // Web3Forms access key for the contact form; inquiries go to the inbox the key was created
   // for. It is a public key, so it is safe in the browser. NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
