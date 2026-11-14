@@ -33,6 +33,12 @@ Still to add (empty values are hidden on the page):
 Please also review the rest of the copy in `src/lib/content.ts` (hero, services,
 "Why partner with us") to make sure every statement matches how SWS Global works.
 
+## Hidden sections
+
+The **About** (leadership team) section is hidden, along with its "About" links in the menu and footer.
+To show it again, set `showAbout = true` at the top of `src/lib/content.ts`; its content is kept in `about`
+in the same file.
+
 ## Project structure
 
 ```

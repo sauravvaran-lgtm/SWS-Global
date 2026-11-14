@@ -5,14 +5,22 @@
  * Photos are free-to-use images from Unsplash (see README for credits).
  */
 
-export const navLinks = [
-  { label: "Expertise", href: "#expertise" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
-  { label: "Success Stories", href: "#testimonials" },
-  { label: "Careers", href: "#careers" },
-] as const;
+/**
+ * The About (leadership team) section is hidden for now. Set this to true to show it again,
+ * together with its "About" links in the menu and footer. Its content is kept below in `about`.
+ */
+export const showAbout = false;
+
+export const navLinks = (
+  [
+    { label: "Expertise", href: "#expertise" },
+    { label: "Why Us", href: "#why-us" },
+    { label: "Services", href: "#services" },
+    { label: "About", href: "#about" },
+    { label: "Success Stories", href: "#testimonials" },
+    { label: "Careers", href: "#careers" },
+  ] as const
+).filter((link) => showAbout || link.href !== "#about");
 
 export const hero = {
   badge: "RPO",

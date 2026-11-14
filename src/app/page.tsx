@@ -13,6 +13,7 @@ import { Careers } from "@/components/sections/Careers";
 import { WhyPartner } from "@/components/sections/WhyPartner";
 import { Contact } from "@/components/sections/Contact";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { showAbout } from "@/lib/content";
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ export default function Home() {
         <Approach />
         <Stats />
         <Services />
-        <About />
+        {showAbout && <About />}
         <Testimonials />
         <Careers />
         <Contact />

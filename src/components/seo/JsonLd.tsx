@@ -1,4 +1,4 @@
-import { about, expertise, services } from "@/lib/content";
+import { about, expertise, services, showAbout } from "@/lib/content";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 /**
@@ -32,12 +32,6 @@ export function JsonLd() {
       caption: siteConfig.name,
     },
     image: { "@id": logoId },
-    employee: [...about.executives, ...about.growthTeam].map((p) => ({
-      "@type": "Person",
-      name: p.name,
-      jobTitle: p.role,
-      worksFor: { "@id": orgId },
-    })),
     knowsAbout: [
       "Offshore recruitment",
       "Recruitment process outsourcing",
@@ -60,6 +54,14 @@ export function JsonLd() {
     },
   };
 
+  if (showAbout) {
+    organization.employee = [...about.executives, ...about.growthTeam].map((p) => ({
+      "@type": "Person",
+      name: p.name,
+      jobTitle: p.role,
+      worksFor: { "@id": orgId },
+    }));
+  }
   if (email) organization.email = email;
   if (phones.length > 0) {
     organization.telephone = phones[0].href.replace("tel:", "");
